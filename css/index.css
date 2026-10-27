@@ -48,6 +48,7 @@ img {
   --ground-far: #12205a;
   --ground-near: #0b1438;
   --cross: #0b1226;
+  --alt1: #76c4ff;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -69,6 +70,7 @@ img {
     --sky-bottom: #b9791a;
     --ground-far: #0a1230;
     --ground-near: #050918;
+    --alt1: #76c4ff;
     color-scheme: dark;
   }
 }
@@ -91,6 +93,7 @@ img {
   --sky-bottom: #b9791a;
   --ground-far: #0a1230;
   --ground-near: #050918;
+  --alt1: #359eff;
   color-scheme: dark;
 }
 
@@ -191,7 +194,7 @@ button {
   font: 500 0.75rem/1.3 var(--font-mono);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-text);
+  color: var(--accent);
 }
 .tag {
   display: inline-block;
@@ -221,7 +224,7 @@ button {
   transform: translateY(-2px);
 }
 .btn-primary {
-  background: var(--accent);
+  background: var(--alt1);
   color: var(--on-accent);
 }
 .btn-ghost {
@@ -281,7 +284,7 @@ button {
 
 /* Notice */
 .notice {
-  background: var(--accent);
+  background: var(--alt1);
   color: var(--on-accent);
   font-size: 0.84rem;
 }
@@ -450,7 +453,7 @@ button {
   font-style: normal;
   background: linear-gradient(
     transparent 64%,
-    color-mix(in srgb, var(--accent) 60%, transparent) 64% 92%,
+    color-mix(in srgb, var(--alt1) 60%, transparent) 64% 92%,
     transparent 92%
   );
   padding-inline: 0.04em;
