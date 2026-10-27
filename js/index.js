@@ -19,12 +19,12 @@ const CONTENT = {
   },
   hero: {
     eyebrow: "Ikatan Alumni · Institut Injil Indonesia · Batu",
-    slogan: ["Dipanggil melayani,", "diutus berdampak."],
+    slogan: ["We are one in,", "love, spirit, and purpose."],
     lede: "Rumah bersama bagi lulusan Institut Injil Indonesia. Temukan kabar terbaru, kenali pengurus, baca tulisan sesama alumni, dan dukung pelayanan kita.",
   },
   slogan: {
     head: "Tiga pegangan di balik slogan kita",
-    main: "Dipanggil melayani, diutus berdampak.",
+    main: "We are one, in love, in spirit, in purpose.",
     text: "Slogan ini mengingatkan alumni bahwa panggilan lahir dari Tuhan dan diwujudkan di tengah jemaat, keluarga, dan masyarakat, di mana pun kita ditempatkan.",
     values: [
       {
@@ -525,7 +525,7 @@ async function copyText(text, label) {
 /* ---------- Navigasi dan tema ---------- */
 const NAV = [
   ["slogan", "Slogan"],
-  ["galeri", "Galeri"],
+  /*["galeri", "Galeri"],*/
   ["berita", "Berita"],
   ["pengurus", "Pengurus"],
   ["artikel", "Artikel"],
@@ -971,7 +971,7 @@ $("#f-tujuan").addEventListener("change", updateMsg);
 renderNav();
 renderHero();
 renderSlogan();
-renderGallery();
+/*renderGallery();*/
 renderNews();
 renderBoard();
 renderArticles();
