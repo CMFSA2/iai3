@@ -7,6 +7,7 @@
       content="width=device-width,initial-scale=1,viewport-fit=cover"
     />
     <link rel="icon" href="img/logo.png" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <title>Ikatan Alumni Institut Injil Indonesia</title>
@@ -15,8 +16,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&display=swap"
     />
-    <link rel="stylesheet" href="css/index.css" />
-
     <a class="skip" href="#main">Lewati ke konten</a>
 
     <!--div class="notice" id="notice" role="note" hidden>
@@ -32,23 +31,13 @@
 
     <header class="site-header">
       <div class="wrap">
-        <div class="nav">
+        <div class="dock">
           <a
             class="brand"
             href="#beranda"
             aria-label="Alumni Institut Injil Indonesia, ke beranda"
           >
-            <img
-              class="logo-light"
-              src="img/logo.png"
-              width="36"
-              height="36"
-              alt="Logo IA-I3"
-            />
-            <!--svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true">
-              <path d="M3 29V15a13 13 0 0 1 26 0v14z" fill="var(--fg)" />
-              <circle cx="16" cy="23" r="6" fill="var(--alt1)" />
-            </svg-->
+            <span class="brand-logo" id="brandLogo"></span>
             <span class="brand-text"
               ><b>Ikatan Alumni</b
               ><span>Institut Injil Indonesia · Batu</span></span
@@ -83,6 +72,9 @@
                 <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" />
               </svg>
             </button>
+            <a class="btn btn-primary nav-cta" href="#rekening"
+              >Dukung alumni</a
+            >
             <button
               class="icon-btn menu-btn"
               type="button"
@@ -90,12 +82,13 @@
               aria-expanded="false"
               aria-controls="mobileMenu"
             >
-              Menu
+              <span class="bars" aria-hidden="true"></span
+              ><span class="menu-label">Menu</span>
             </button>
           </div>
         </div>
         <nav
-          class="mobile-menu"
+          class="sheet"
           id="mobileMenu"
           aria-label="Navigasi seluler"
           hidden
@@ -121,87 +114,12 @@
               </div>
             </div>
             <div class="hero-art">
-              <!--img
-                class="logo"
-                src="img/logo.png"
-                width="700"
-                height="400"
-                alt="Logo IA-I3"
-              /-->
-              <svg
-                viewBox="0 0 400 500"
-                role="img"
-                aria-label="Ilustrasi fajar terbit di atas bukit dengan salib"
-              >
-                <defs>
-                  <clipPath id="archClip">
-                    <path
-                      d="M0 500V200C0 89.5 89.5 0 200 0s200 89.5 200 200v300z"
-                    />
-                  </clipPath>
-                  <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" style="stop-color: var(--sky-top)" />
-                    <stop offset=".55" style="stop-color: var(--sky-mid)" />
-                    <stop offset="1" style="stop-color: var(--sky-bottom)" />
-                  </linearGradient>
-                  <radialGradient
-                    id="glowG"
-                    cx="200"
-                    cy="372"
-                    r="300"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop
-                      offset="0"
-                      style="stop-color: var(--accent); stop-opacity: 0.7"
-                    />
-                    <stop
-                      offset="1"
-                      style="stop-color: var(--accent); stop-opacity: 0"
-                    />
-                  </radialGradient>
-                </defs>
-                <g clip-path="url(#archClip)">
-                  <rect width="400" height="500" fill="url(#skyG)" />
-                  <rect width="400" height="500" fill="url(#glowG)" />
-                  <g
-                    id="rays"
-                    style="fill: var(--accent); fill-opacity: 0.16"
-                  ></g>
-                  <g class="sun-g">
-                    <circle
-                      cx="200"
-                      cy="372"
-                      r="72"
-                      style="fill: var(--accent)"
-                    />
-                    <rect
-                      x="196.5"
-                      y="296"
-                      width="7"
-                      height="86"
-                      rx="1.5"
-                      style="fill: var(--cross)"
-                    />
-                    <rect
-                      x="177"
-                      y="316"
-                      width="46"
-                      height="7"
-                      rx="1.5"
-                      style="fill: var(--cross)"
-                    />
-                  </g>
-                  <path
-                    d="M0 388Q110 350 215 378T400 366V500H0z"
-                    style="fill: var(--ground-far)"
-                  />
-                  <path
-                    d="M0 440Q150 400 270 428T400 416V500H0z"
-                    style="fill: var(--ground-near)"
-                  />
-                </g>
-              </svg>
+              <div class="stage">
+                <span class="ring ring-a" aria-hidden="true"></span>
+                <span class="ring ring-b" aria-hidden="true"></span>
+                <div class="plate" id="heroLogo"></div>
+              </div>
+              <p class="stage-cap" id="logoCap"></p>
             </div>
           </div>
           <div class="latest" id="latest"></div>

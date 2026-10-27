@@ -7,6 +7,8 @@
      https://) dan `cta` (tulisan pada tombol). Kosongkan `url` untuk
      menyembunyikan tombol pada item itu. Tautan contoh di bawah
      mengarah ke example.com dan perlu diganti.
+   - Logo ikatan alumni: org.logo berisi nama berkas logo yang dipublikasikan
+     bersama halaman (atau data URI). org.verse tampil di bawah logo hero.
    - Set sampleNotice ke false untuk menyembunyikan pita contoh.
    ============================================================ */
 const CONTENT = {
@@ -16,15 +18,17 @@ const CONTENT = {
     name: "Institut Injil Indonesia",
     city: "Batu, Jawa Timur",
     fullName: "Ikatan Alumni Institut Injil Indonesia",
+    logo: "img/logo.png",
+    verse: "1 Kor 3 : 5–9",
   },
   hero: {
     eyebrow: "Ikatan Alumni · Institut Injil Indonesia · Batu",
-    slogan: ["We are one in", "love, spirit, and purpose."],
+    slogan: ["We are one in", "love, spirit, and purpose"],
     lede: "Rumah bersama bagi lulusan Institut Injil Indonesia. Temukan kabar terbaru, kenali pengurus, baca tulisan sesama alumni, dan dukung pelayanan kita.",
   },
   slogan: {
     head: "Tiga pegangan di balik slogan kita",
-    main: "We are one, in love, in spirit, in purpose.",
+    main: "We are one in love, in spirit, in purpose.",
     text: "Slogan ini mengingatkan alumni bahwa panggilan lahir dari Tuhan dan diwujudkan di tengah jemaat, keluarga, dan masyarakat, di mana pun kita ditempatkan.",
     values: [
       {
@@ -692,21 +696,62 @@ async function copyText(text, label) {
 
 /* ---------- Navigasi dan tema ---------- */
 const NAV = [
-  ["slogan", "Slogan"],
-  /*["galeri", "Galeri"],*/
-  ["berita", "Berita"],
-  ["pengurus", "Pengurus"],
-  ["artikel", "Artikel"],
-  ["kontak", "Kontak"],
-  ["rekening", "Rekening"],
+  ["slogan", "Slogan", "Nilai dan semangat kita"],
+  /*["galeri", "Galeri", "Foto kegiatan terbaru"],*/
+  ["berita", "Berita", "Kabar dari sesama alumni"],
+  ["pengurus", "Pengurus", "Susunan pengurus alumni"],
+  ["artikel", "Artikel", "Tulisan dari ladang pelayanan"],
+  ["kontak", "Kontak", "Hubungi sekretariat"],
+  ["rekening", "Rekening", "Dukungan dan iuran alumni"],
 ];
 function renderNav() {
-  const links = NAV.map(
+  $("#navLinks").innerHTML = NAV.map(
     ([id, label]) => `<a href="#${id}" data-spy-link="${id}">${label}</a>`,
   ).join("");
-  $("#navLinks").innerHTML = links;
-  $("#mobileMenu").innerHTML = links;
-  $("#footNav").innerHTML = `<a href="#beranda">Beranda</a>` + links;
+  $("#mobileMenu").innerHTML =
+    NAV.map(
+      ([id, label, desc]) =>
+        `<a href="#${id}" data-spy-link="${id}"><b>${label}</b><small>${desc}</small></a>`,
+    ).join("") +
+    `<a class="sheet-cta" href="#rekening"><b>Dukung alumni</b><small>Lihat rekening dan buat konfirmasi</small></a>`;
+  $("#footNav").innerHTML =
+    `<a href="#beranda">Beranda</a>` +
+    NAV.map(([id, label]) => `<a href="#${id}">${label}</a>`).join("");
+}
+/* Penanda geser pada navigasi desktop */
+function moveInk(target) {
+  const nav = $("#navLinks");
+  const el = target || nav.querySelector('[aria-current="true"]');
+  $$("a", nav).forEach((a) => a.toggleAttribute("data-lit", a === el));
+  if (!el) {
+    nav.style.setProperty("--o", "0");
+    return;
+  }
+  const wasHidden = nav.style.getPropertyValue("--o") !== "1";
+  if (wasHidden) nav.classList.add("no-glide");
+  nav.style.setProperty("--x", el.offsetLeft + "px");
+  nav.style.setProperty("--w", el.offsetWidth + "px");
+  nav.style.setProperty("--o", "1");
+  if (wasHidden) {
+    void nav.offsetWidth;
+    nav.classList.remove("no-glide");
+  }
+}
+function setupInk() {
+  const nav = $("#navLinks");
+  nav.addEventListener("mouseover", (e) => {
+    const a = e.target.closest("a");
+    if (a) moveInk(a);
+  });
+  nav.addEventListener("mouseleave", () => moveInk());
+  nav.addEventListener("focusin", (e) => {
+    const a = e.target.closest("a");
+    if (a) moveInk(a);
+  });
+  nav.addEventListener("focusout", () => moveInk());
+  addEventListener("resize", () => moveInk());
+  if (document.fonts && document.fonts.ready)
+    document.fonts.ready.then(() => moveInk());
 }
 function setupSpy() {
   if (!("IntersectionObserver" in window)) return;
@@ -719,6 +764,7 @@ function setupSpy() {
             a.setAttribute("aria-current", "true");
           else a.removeAttribute("aria-current");
         });
+        moveInk();
       });
     },
     { rootMargin: "-40% 0px -55% 0px" },
@@ -753,20 +799,19 @@ function renderHero() {
     <button type="button" data-action="read" data-type="article" data-id="${esc(a.id)}">
       <span class="eyebrow">Artikel terbaru</span><strong>${esc(a.title)}</strong><small>${esc(a.author)} · Angkatan ${esc(a.angk)}</small>
     </button>`;
-  const rays = $("#rays");
-  const cx = 200,
-    cy = 372,
-    r = 560,
-    step = Math.PI / 20;
-  let d = "";
-  for (let i = 0; i < 20; i += 2) {
-    const a1 = Math.PI + i * step,
-      a2 = a1 + step;
-    const p = (ang) =>
-      `${(cx + r * Math.cos(ang)).toFixed(1)},${(cy + r * Math.sin(ang)).toFixed(1)}`;
-    d += `<polygon points="${cx},${cy} ${p(a1)} ${p(a2)}"/>`;
-  }
-  rays.innerHTML = d;
+  $("#brandLogo").innerHTML = logoMarkup();
+  $("#heroLogo").innerHTML = logoMarkup();
+  $("#logoCap").innerHTML =
+    `<span>${esc(CONTENT.org.fullName)}</span>` +
+    (CONTENT.org.verse
+      ? `<span class="tag">${esc(CONTENT.org.verse)}</span>`
+      : "");
+}
+function logoMarkup() {
+  const L = CONTENT.org.logo;
+  return L
+    ? `<img src="${esc(L)}" alt="Logo ${esc(CONTENT.org.fullName)}" decoding="async">`
+    : `<span class="logo-fallback" aria-hidden="true">IA I-3</span>`;
 }
 function renderSlogan() {
   const s = CONTENT.slogan;
@@ -955,7 +1000,9 @@ function renderArticles() {
 function renderContact() {
   const c = CONTENT.contact;
   $("#contactText").textContent = c.text;
-  $("#mapLink").href = "https://maps.app.goo.gl/THxx6n5AsgPNRrWXA";
+  $("#mapLink").href =
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(c.mapQuery);
   $("#contacts").innerHTML = c.rows
     .map(
       (r) => `
@@ -1049,6 +1096,8 @@ function openReader(type, id) {
 
 /* ---------- Event ---------- */
 document.addEventListener("click", (e) => {
+  if (!e.target.closest(".site-header") && !$("#mobileMenu").hidden)
+    toggleMenu(false);
   if (openEl && e.target === openEl) {
     closeOverlay();
     return;
@@ -1059,7 +1108,7 @@ document.addEventListener("click", (e) => {
   }
   const t = e.target.closest("[data-action]");
   if (!t) {
-    const l = e.target.closest(".mobile-menu a");
+    const l = e.target.closest(".sheet a");
     if (l) toggleMenu(false);
     return;
   }
@@ -1099,8 +1148,14 @@ function toggleMenu(force) {
   const show = typeof force === "boolean" ? force : m.hidden;
   m.hidden = !show;
   b.setAttribute("aria-expanded", String(show));
+  $(".menu-label").textContent = show ? "Tutup" : "Menu";
 }
 document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !openEl && !$("#mobileMenu").hidden) {
+    toggleMenu(false);
+    $(".menu-btn").focus();
+    return;
+  }
   if (!openEl) return;
   if (e.key === "Escape") {
     closeOverlay();
@@ -1144,6 +1199,7 @@ renderArticles();
 renderContact();
 renderBank();
 setupSpy();
+setupInk();
 $("#footText").textContent =
-  `© Christian Marlen Firuli Simarmata. Salus Animarum Suprema Lex.`;
+  `© ${new Date().getFullYear()} ${CONTENT.org.fullName}. Soli Deo Gloria.`;
 $("#notice").hidden = !CONTENT.sampleNotice;
