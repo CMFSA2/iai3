@@ -592,7 +592,7 @@ const CONTENT = {
     ],
   },
   bank: {
-    text: "Dukungan Anda membiayai beasiswa, kunjungan pelayanan, dan kegiatan alumni. Pilih tujuan, transfer ke rekening yang sesuai, lalu kirim konfirmasi kepada bendahara.",
+    text: "Dukungan Anda membiayai beasiswa, kunjungan pelayanan, dan kegiatan alumni. Pilih tujuan, transfer ke rekening yang sesuai, lalu kirim konfirmasi melalui kontak yang tersedia diatas.",
     accounts: [
       {
         id: "b1",
