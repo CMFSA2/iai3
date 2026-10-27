@@ -1,0 +1,478 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+  </head>
+  <body>
+    <title>Alumni Institut Injil Indonesia</title>
+    <meta name="claude:viewport-fit-sides" content="cover" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <a class="skip" href="#main">Lewati ke konten</a>
+
+    <!--div class="notice" id="notice" role="note" hidden>
+      <div class="wrap notice-in">
+        <p>
+          Mode contoh: nama, foto, dan nomor rekening di halaman ini masih data
+          sampel. Ganti isi <code>CONTENT</code> di bagian bawah file sebelum
+          dipakai.
+        </p>
+        <button type="button" data-action="dismiss-notice">Tutup</button>
+      </div>
+    </div-->
+
+    <header class="site-header">
+      <div class="wrap">
+        <div class="nav">
+          <a
+            class="brand"
+            href="#beranda"
+            aria-label="Alumni Institut Injil Indonesia, ke beranda"
+          >
+            <svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M3 29V15a13 13 0 0 1 26 0v14z" fill="var(--fg)" />
+              <circle cx="16" cy="23" r="6" fill="var(--accent)" />
+            </svg>
+            <span class="brand-text"
+              ><b>Alumni I-3</b
+              ><span>Institut Injil Indonesia · Batu</span></span
+            >
+          </a>
+          <nav
+            class="nav-links"
+            aria-label="Navigasi utama"
+            id="navLinks"
+          ></nav>
+          <div class="nav-tools">
+            <button
+              class="icon-btn"
+              type="button"
+              data-action="theme"
+              aria-label="Ganti tema terang atau gelap"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" />
+              </svg>
+            </button>
+            <button
+              class="icon-btn menu-btn"
+              type="button"
+              data-action="menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+            >
+              Menu
+            </button>
+          </div>
+        </div>
+        <nav
+          class="mobile-menu"
+          id="mobileMenu"
+          aria-label="Navigasi seluler"
+          hidden
+        ></nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="beranda" data-spy>
+        <div class="wrap">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow" id="heroEyebrow"></p>
+              <h1 id="heroTitle"></h1>
+              <p class="lede" id="heroLede"></p>
+              <div class="cta-row">
+                <a class="btn btn-primary" href="#galeri"
+                  >Lihat kegiatan terbaru</a
+                >
+                <a class="btn btn-ghost" href="#rekening"
+                  >Dukung pelayanan alumni</a
+                >
+              </div>
+            </div>
+            <div class="hero-art">
+              <svg
+                viewBox="0 0 400 500"
+                role="img"
+                aria-label="Ilustrasi fajar terbit di atas bukit dengan salib"
+              >
+                <defs>
+                  <clipPath id="archClip">
+                    <path
+                      d="M0 500V200C0 89.5 89.5 0 200 0s200 89.5 200 200v300z"
+                    />
+                  </clipPath>
+                  <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" style="stop-color: var(--sky-top)" />
+                    <stop offset=".55" style="stop-color: var(--sky-mid)" />
+                    <stop offset="1" style="stop-color: var(--sky-bottom)" />
+                  </linearGradient>
+                  <radialGradient
+                    id="glowG"
+                    cx="200"
+                    cy="372"
+                    r="300"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop
+                      offset="0"
+                      style="stop-color: var(--accent); stop-opacity: 0.7"
+                    />
+                    <stop
+                      offset="1"
+                      style="stop-color: var(--accent); stop-opacity: 0"
+                    />
+                  </radialGradient>
+                </defs>
+                <g clip-path="url(#archClip)">
+                  <rect width="400" height="500" fill="url(#skyG)" />
+                  <rect width="400" height="500" fill="url(#glowG)" />
+                  <g
+                    id="rays"
+                    style="fill: var(--accent); fill-opacity: 0.16"
+                  ></g>
+                  <g class="sun-g">
+                    <circle
+                      cx="200"
+                      cy="372"
+                      r="72"
+                      style="fill: var(--accent)"
+                    />
+                    <rect
+                      x="196.5"
+                      y="296"
+                      width="7"
+                      height="86"
+                      rx="1.5"
+                      style="fill: var(--cross)"
+                    />
+                    <rect
+                      x="177"
+                      y="316"
+                      width="46"
+                      height="7"
+                      rx="1.5"
+                      style="fill: var(--cross)"
+                    />
+                  </g>
+                  <path
+                    d="M0 388Q110 350 215 378T400 366V500H0z"
+                    style="fill: var(--ground-far)"
+                  />
+                  <path
+                    d="M0 440Q150 400 270 428T400 416V500H0z"
+                    style="fill: var(--ground-near)"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="latest" id="latest"></div>
+        </div>
+      </section>
+
+      <section class="section band" id="slogan" data-spy>
+        <div class="wrap slogan-grid">
+          <div class="sec-head">
+            <p class="eyebrow">Slogan dan nilai</p>
+            <h2 id="sloganHead"></h2>
+            <blockquote class="slogan-big" id="sloganMain"></blockquote>
+            <p id="sloganText"></p>
+          </div>
+          <ul class="values" id="values"></ul>
+        </div>
+      </section>
+
+      <section class="section" id="galeri" data-spy>
+        <div class="wrap">
+          <div class="sec-top">
+            <div class="sec-head">
+              <p class="eyebrow">Galeri</p>
+              <h2>Dokumentasi kegiatan terbaru</h2>
+              <p>
+                Klik foto untuk melihat ukuran penuh. Gunakan tombol panah di
+                papan ketik untuk berpindah foto.
+              </p>
+            </div>
+            <div
+              class="chips"
+              id="galFilters"
+              role="group"
+              aria-label="Saring galeri berdasarkan jenis kegiatan"
+            ></div>
+          </div>
+          <div class="gallery" id="gallery"></div>
+        </div>
+      </section>
+
+      <section class="section band" id="berita" data-spy>
+        <div class="wrap">
+          <div class="sec-top">
+            <div class="sec-head">
+              <p class="eyebrow">Berita alumni</p>
+              <h2>Kabar dari sesama alumni</h2>
+              <p>
+                Kegiatan, pelayanan, dan peristiwa penting dari keluarga besar
+                alumni.
+              </p>
+            </div>
+            <div
+              class="chips"
+              id="newsFilters"
+              role="group"
+              aria-label="Saring berita berdasarkan kategori"
+            ></div>
+          </div>
+          <div class="news-grid" id="news"></div>
+        </div>
+      </section>
+
+      <section class="section" id="pengurus" data-spy>
+        <div class="wrap">
+          <div class="sec-top">
+            <div class="sec-head">
+              <p class="eyebrow" id="boardPeriod"></p>
+              <h2>Pengurus alumni</h2>
+              <p>
+                Mereka yang melayani dan menggerakkan ikatan alumni. Hubungi
+                bidang yang sesuai dengan kebutuhan Anda.
+              </p>
+            </div>
+            <div
+              class="chips"
+              id="boardTabs"
+              role="group"
+              aria-label="Saring pengurus berdasarkan kelompok"
+            ></div>
+          </div>
+          <div id="board"></div>
+        </div>
+      </section>
+
+      <section class="section band" id="artikel" data-spy>
+        <div class="wrap">
+          <div class="sec-head" style="margin-bottom: 28px">
+            <p class="eyebrow">Artikel alumni</p>
+            <h2>Tulisan dari ladang pelayanan</h2>
+            <p>
+              Refleksi, pengalaman, dan gagasan yang ditulis alumni. Cari
+              berdasarkan judul, penulis, atau topik.
+            </p>
+          </div>
+          <div class="tools">
+            <div class="tools-row">
+              <input
+                class="field search"
+                id="artSearch"
+                type="search"
+                placeholder="Cari judul, penulis, atau topik"
+                aria-label="Cari artikel"
+                autocomplete="off"
+              />
+              <select class="field" id="artSort" aria-label="Urutkan artikel">
+                <option value="new">Terbaru dulu</option>
+                <option value="old">Terlama dulu</option>
+              </select>
+            </div>
+            <div
+              class="chips"
+              id="artTags"
+              role="group"
+              aria-label="Saring artikel berdasarkan topik"
+            ></div>
+            <p
+              class="result-count"
+              id="artCount"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </div>
+          <div class="a-list" id="articles"></div>
+        </div>
+      </section>
+
+      <section class="section" id="kontak" data-spy>
+        <div class="wrap contact-grid">
+          <div class="sec-head">
+            <p class="eyebrow">Kontak</p>
+            <h2>Ada kabar atau pertanyaan untuk pengurus?</h2>
+            <p id="contactText"></p>
+            <div class="cta-row">
+              <a
+                class="btn btn-ghost"
+                id="mapLink"
+                href="#kontak"
+                target="_blank"
+                rel="noopener"
+                >Buka lokasi di peta</a
+              >
+            </div>
+          </div>
+          <dl class="c-list" id="contacts"></dl>
+        </div>
+      </section>
+
+      <section class="section band" id="rekening" data-spy>
+        <div class="wrap">
+          <div class="sec-head" style="margin-bottom: clamp(24px, 4vw, 40px)">
+            <p class="eyebrow">Informasi rekening</p>
+            <h2>Dukung pelayanan alumni</h2>
+            <p id="bankText"></p>
+          </div>
+          <div class="bank-grid" id="banks"></div>
+          <div class="confirm">
+            <div>
+              <h3>Buat pesan konfirmasi</h3>
+              <p class="hint">
+                Isi data Anda, lalu salin pesan dan kirim bersama bukti transfer
+                kepada bendahara.
+              </p>
+              <div class="form">
+                <label for="f-nama"
+                  >Nama lengkap<input
+                    class="field"
+                    id="f-nama"
+                    type="text"
+                    placeholder="Contoh: Yosua Pratama"
+                    autocomplete="off"
+                /></label>
+                <label for="f-angk"
+                  >Angkatan<input
+                    class="field"
+                    id="f-angk"
+                    type="text"
+                    inputmode="numeric"
+                    placeholder="Contoh: 2012"
+                    autocomplete="off"
+                /></label>
+                <label for="f-tujuan"
+                  >Tujuan transfer<select class="field" id="f-tujuan"></select
+                ></label>
+                <label for="f-nominal"
+                  >Nominal<input
+                    class="field"
+                    id="f-nominal"
+                    type="text"
+                    placeholder="Contoh: Rp 500.000"
+                    autocomplete="off"
+                /></label>
+              </div>
+            </div>
+            <div class="out">
+              <label for="f-out" style="font-weight: 600; font-size: 0.85rem"
+                >Pesan konfirmasi</label
+              >
+              <textarea class="field" id="f-out" readonly></textarea>
+              <div>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-action="copy-msg"
+                >
+                  Salin pesan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap foot">
+        <p id="footText"></p>
+        <nav aria-label="Navigasi footer" id="footNav"></nav>
+      </div>
+    </footer>
+
+    <!-- Pembaca berita dan artikel -->
+    <div
+      class="overlay"
+      id="reader"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="rdTitle"
+    >
+      <article class="panel reader">
+        <div class="rd-top">
+          <span class="eyebrow" id="rdKicker"></span>
+          <button class="icon-btn" type="button" data-close>Tutup</button>
+        </div>
+        <div class="rd-in">
+          <h3 id="rdTitle"></h3>
+          <p class="meta-line" id="rdMeta"></p>
+          <div class="rd-body" id="rdBody"></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Pratinjau foto -->
+    <div
+      class="overlay"
+      id="lightbox"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-label="Pratinjau foto"
+    >
+      <div class="panel lb-panel">
+        <button
+          class="icon-btn lb-close"
+          type="button"
+          data-close
+          aria-label="Tutup pratinjau"
+        >
+          Tutup
+        </button>
+        <div class="lb-media" id="lbMedia"></div>
+        <div class="lb-cap">
+          <span class="tag" id="lbTag" style="justify-self: start"></span>
+          <h3 id="lbTitle"></h3>
+          <p class="meta-line" id="lbMeta"></p>
+          <p id="lbDesc"></p>
+        </div>
+        <div class="lb-ctl">
+          <button class="icon-btn" type="button" data-action="lb-prev">
+            Sebelumnya
+          </button>
+          <span class="result-count" id="lbCount" aria-live="polite"></span>
+          <button class="icon-btn" type="button" data-action="lb-next">
+            Berikutnya
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <noscript
+      ><p style="padding: 24px">
+        Halaman ini memerlukan JavaScript untuk menampilkan konten.
+      </p></noscript
+    >
+    <script src="js/index.js"></script>
+  </body>
+</html>
