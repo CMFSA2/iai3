@@ -449,14 +449,14 @@ const CONTENT = {
           {
             name: "Ruth Fulcher Hutabarat, S.Th",
             role: "Bidang V : IT Publikasi",
-            angk: 2015,
+            angk: 2019,
             city: "Batam",
             tone: 1,
           },
           {
             name: "Christian M.F Simarmata, S.Th",
             role: "Bidang V : IT Publikasi",
-            angk: 2015,
+            angk: 2019,
             city: "Bengkulu",
             tone: 1,
           },
