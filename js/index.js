@@ -19,7 +19,7 @@ const CONTENT = {
   },
   hero: {
     eyebrow: "Ikatan Alumni · Institut Injil Indonesia · Batu",
-    slogan: ["We are one in,", "love, spirit, and purpose."],
+    slogan: ["We are one in", "love, spirit, and purpose."],
     lede: "Rumah bersama bagi lulusan Institut Injil Indonesia. Temukan kabar terbaru, kenali pengurus, baca tulisan sesama alumni, dan dukung pelayanan kita.",
   },
   slogan: {
