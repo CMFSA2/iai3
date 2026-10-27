@@ -3,6 +3,10 @@
    - Foto: isi `src` dengan data URI atau berkas yang dipublikasikan
      bersama halaman. Alamat gambar dari situs lain diblokir.
    - Tanggal memakai format YYYY-MM-DD.
+   - Setiap berita dan artikel punya `url` (tautan tujuan, harus diawali
+     https://) dan `cta` (tulisan pada tombol). Kosongkan `url` untuk
+     menyembunyikan tombol pada item itu. Tautan contoh di bawah
+     mengarah ke example.com dan perlu diganti.
    - Set sampleNotice ke false untuk menyembunyikan pita contoh.
    ============================================================ */
 const CONTENT = {
@@ -15,12 +19,12 @@ const CONTENT = {
   },
   hero: {
     eyebrow: "Ikatan Alumni · Institut Injil Indonesia · Batu",
-    slogan: ["We are one in", "love, spirit, and purpose."],
+    slogan: ["Dipanggil melayani,", "diutus berdampak."],
     lede: "Rumah bersama bagi lulusan Institut Injil Indonesia. Temukan kabar terbaru, kenali pengurus, baca tulisan sesama alumni, dan dukung pelayanan kita.",
   },
   slogan: {
     head: "Tiga pegangan di balik slogan kita",
-    main: "One in Love, in Spirit, in Purpose.",
+    main: "Dipanggil melayani, diutus berdampak.",
     text: "Slogan ini mengingatkan alumni bahwa panggilan lahir dari Tuhan dan diwujudkan di tengah jemaat, keluarga, dan masyarakat, di mana pun kita ditempatkan.",
     values: [
       {
@@ -122,6 +126,8 @@ const CONTENT = {
   news: [
     {
       id: "n1",
+      url: "https://example.com/berita/reuni-akbar-2026",
+      cta: "Lihat dokumentasi lengkap",
       cat: "Kegiatan",
       title: "Reuni Akbar Alumni 2026 Berlangsung Hangat di Batu",
       date: "2026-10-18",
@@ -135,6 +141,8 @@ const CONTENT = {
     },
     {
       id: "n2",
+      url: "https://example.com/berita/kunjungan-jemaat-terpencil",
+      cta: "Dukung pelayanan daerah",
       cat: "Pelayanan",
       title: "Tim Alumni Mengunjungi Jemaat di Daerah Terpencil",
       date: "2026-10-04",
@@ -148,6 +156,8 @@ const CONTENT = {
     },
     {
       id: "n3",
+      url: "https://example.com/berita/duta-kampus",
+      cta: "Daftar jadi duta kampus",
       cat: "Kampus",
       title: "Alumni Diajak Menjadi Duta Kampus pada Penerimaan Mahasiswa Baru",
       date: "2026-09-22",
@@ -161,6 +171,8 @@ const CONTENT = {
     },
     {
       id: "n4",
+      url: "https://example.com/berita/penahbisan-gembala-sidang",
+      cta: "Kirim ucapan selamat",
       cat: "Kabar Alumni",
       title: "Dua Alumni Muda Ditahbiskan sebagai Gembala Sidang",
       date: "2026-09-09",
@@ -174,6 +186,8 @@ const CONTENT = {
     },
     {
       id: "n5",
+      url: "https://example.com/berita/beasiswa-alumni-tahap-2",
+      cta: "Buka info beasiswa",
       cat: "Kabar Alumni",
       title: "Program Beasiswa Alumni Tahap Kedua Dibuka",
       date: "2026-08-28",
@@ -195,45 +209,17 @@ const CONTENT = {
         desc: "Memberi arahan dan pertimbangan rohani.",
         people: [
           {
-            name: "Pdt. Chandrawati, S.E., M.Th",
-            role: "Dewan Penasehat",
+            name: "Pdt. Yohanes Santoso, M.Th.",
+            role: "Ketua Dewan Pembina",
             angk: 1998,
-            city: "Kota Batu",
+            city: "Surabaya",
             tone: 0,
           },
           {
-            name: "Pdt. Dr. Awasuning Manaransyah",
-            role: "Dewan Penasehat",
+            name: "Pdt. Margaretha Lestari, M.Div.",
+            role: "Anggota Dewan Pembina",
             angk: 2001,
-            city: "Kota Batu",
-            tone: 1,
-          },
-          {
-            name: "Pdt. Sudomo, D.Min",
-            role: "Dewan Penasehat",
-            angk: 2001,
-            city: "Kota Batu",
-            tone: 2,
-          },
-          {
-            name: "Pdt. Ridwan Hutabarat, M.Th",
-            role: "Dewan Penasehat",
-            angk: 2001,
-            city: "Kota Batu",
-            tone: 3,
-          },
-          {
-            name: "Pdt. Dr. Robby Wagey",
-            role: "Dewan Penasehat",
-            angk: 2001,
-            city: "Kota Batu",
-            tone: 4,
-          },
-          {
-            name: "Pdt. Johanes Eklemius Manuain, M.Th",
-            role: "Dewan Penasehat",
-            angk: 2001,
-            city: "Kota Batu",
+            city: "Malang",
             tone: 2,
           },
         ],
@@ -244,67 +230,32 @@ const CONTENT = {
         desc: "Menjalankan organisasi sehari-hari.",
         people: [
           {
-            name: "Pdt. Hardian Baja Gunanta Tarigan, M.Div",
+            name: "Pdt. Samuel Hartono, M.Th.",
             role: "Ketua Umum",
             angk: 2005,
             city: "Malang",
             tone: 0,
           },
           {
-            name: "Pdt. Dr. Ronny Santoso",
-            role: "Wakil Ketua I",
+            name: "Ev. Debora Simanjuntak, S.Th.",
+            role: "Wakil Ketua",
             angk: 2008,
             city: "Medan",
             tone: 1,
           },
           {
-            name: "Febri Ando Pratama Saragih, S.Th",
-            role: "Wakil Ketua II",
-            angk: 2008,
-            city: "Medan",
-            tone: 1,
-          },
-          {
-            name: "Pdt. Usada Lenno Eltho, M.Div",
-            role: "Sekretaris Umum",
+            name: "Yosua Pratama, S.Th.",
+            role: "Sekretaris",
             angk: 2012,
             city: "Batu",
             tone: 4,
           },
           {
-            name: "Pdt. Dr. Samuel Manaransyah, M.Th",
-            role: "Wakil Sekretaris Umum I",
-            angk: 2012,
-            city: "Batu",
-            tone: 4,
-          },
-          {
-            name: "Pdt. M. Asri, S.Th., M.Min",
-            role: "Wakil Sekretaris Umum II",
-            angk: 2012,
-            city: "Batu",
-            tone: 4,
-          },
-          {
-            name: "Pdt. Em. Kaston Sinaga, S.Th., M.Div",
-            role: "Bendahara Umum",
+            name: "Ruth Kristiani, S.Th.",
+            role: "Bendahara",
             angk: 2010,
             city: "Surabaya",
-            tone: 2,
-          },
-          {
-            name: "Sjenny A.K. Paath, S.Th",
-            role: "Wakil Bendahara Umum I",
-            angk: 2010,
-            city: "Surabaya",
-            tone: 2,
-          },
-          {
-            name: "Jusniar Napitupulu, S.Th",
-            role: "Wakil Bendahara Umum I",
-            angk: 2010,
-            city: "Surabaya",
-            tone: 2,
+            tone: 3,
           },
         ],
       },
@@ -314,136 +265,31 @@ const CONTENT = {
         desc: "Menangani program dan kebutuhan alumni.",
         people: [
           {
-            name: "Pdt. Hiras Tambunan, S.Th",
-            role: "Ketua Bidang I: Organisasi",
+            name: "Pdt. Andreas Wijaya",
+            role: "Bidang Pelayanan dan Misi",
             angk: 2007,
             city: "Kupang",
             tone: 4,
           },
           {
-            name: "Pdt. Yafet Mandiangan, S.Th",
-            role: "Bidang I : Organisasi",
+            name: "Ev. Naomi Tampubolon",
+            role: "Bidang Pendidikan dan Pengembangan",
             angk: 2013,
             city: "Jakarta",
             tone: 2,
           },
           {
-            name: "Pdt. Dr. Sarmauli, M.Th",
-            role: "Ketua Bidang II : Pendidikan & Pengajaran",
+            name: "Timotius Gunawan, S.Th.",
+            role: "Bidang Dana dan Usaha",
             angk: 2011,
             city: "Denpasar",
             tone: 3,
           },
           {
-            name: "Detrina Nokas, S.Th., M.Pd",
-            role: "Bidang II Sub Bidang: Kegiatan Persekutuan Alumni",
+            name: "Lidia Manurung, S.Th.",
+            role: "Bidang Humas dan Media",
             angk: 2015,
             city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Sylvia Irani Takaliuang, S.E., M.Th",
-            role: "Bidang II Sub Bidang: Kegiatan Persekutuan Alumni",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Pdt. Dr. Jammes J. Takaliuang, S.S.",
-            role: "Ketua Bidang III: Penelitian dan Pengembangan",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Josina Riruma, S.H., M.Th",
-            role: "Bidang III Sub Bidang: Pendataan & Pelaksanaan Kegiatan Alumni",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Ubat Pahala Charles Silalahi, M.Phil",
-            role: "Bidang III Sub Bidang: Pendataan & Pelaksanaan Kegiatan Alumni",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Pdt. Dr. Rio Janto Pardede",
-            role: "Ketua Bidang IV: Kemitraan & PKM",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Pdt. Imanuel Pandu,S.Mis., M.Pdk",
-            role: "Bidang IV Sub Bidang: Tanggap Darurat & Pemerhati",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Ps. Nataniel Randakila, M.Th",
-            role: "Bidang IV Sub Bidang: Tanggap Darurat & Pemerhati",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Pdt. Dr. Iwan Setiawan, M.Th",
-            role: "Sub Bidang: Humas",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Pdm. Robert Hia, M.Th",
-            role: "Sub Bidang: Humas",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Pdt. Paulina Rouli, M.Th",
-            role: "Sub Bidang Doa",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Pdt. Sontinar Hutasoit, B.Th",
-            role: "Sub Bidang Doa",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Grace Enting Alfrianne Illu, S.Th",
-            role: "Ketua Bidang V : IT Publikasi",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Yosia Kristianto, S.Th",
-            role: "Bidang V : IT Publikasi",
-            angk: 2015,
-            city: "Bandung",
-            tone: 1,
-          },
-          {
-            name: "Ruth Fulcher Hutabarat, S.Th",
-            role: "Bidang V : IT Publikasi",
-            angk: 2019,
-            city: "Batam",
-            tone: 1,
-          },
-          {
-            name: "Christian M.F Simarmata, S.Th",
-            role: "Bidang V : IT Publikasi",
-            angk: 2019,
-            city: "Bengkulu",
             tone: 1,
           },
         ],
@@ -453,9 +299,11 @@ const CONTENT = {
   articles: [
     {
       id: "a1",
+      url: "https://example.com/artikel/menggembalakan-di-era-informasi",
+      cta: "Baca artikel lengkap",
       tag: "Pastoral",
       title: "Menggembalakan Jemaat di Tengah Banjir Informasi",
-      author: "Hardian Baja G.",
+      author: "Samuel Hartono",
       angk: 2005,
       date: "2026-10-21",
       read: 6,
@@ -468,9 +316,11 @@ const CONTENT = {
     },
     {
       id: "a2",
+      url: "https://example.com/artikel/khotbah-ekspositori-pedesaan",
+      cta: "Baca artikel lengkap",
       tag: "Homiletika",
       title: "Khotbah Ekspositori untuk Jemaat Pedesaan",
-      author: "Hardian Baja G.",
+      author: "Andreas Wijaya",
       angk: 2007,
       date: "2026-10-12",
       read: 5,
@@ -483,9 +333,11 @@ const CONTENT = {
     },
     {
       id: "a3",
+      url: "https://example.com/artikel/merawat-diri-pelayan",
+      cta: "Baca artikel lengkap",
       tag: "Kesehatan Pelayan",
       title: "Merawat Diri Sebelum Merawat Jemaat",
-      author: "Hardian Baja G.",
+      author: "Debora Simanjuntak",
       angk: 2008,
       date: "2026-09-30",
       read: 7,
@@ -498,9 +350,11 @@ const CONTENT = {
     },
     {
       id: "a4",
+      url: "https://example.com/artikel/misi-di-kota-generasi-z",
+      cta: "Baca artikel lengkap",
       tag: "Misi",
       title: "Misi di Kota: Menjumpai Generasi Z",
-      author: "Hardian Baja G.",
+      author: "Naomi Tampubolon",
       angk: 2013,
       date: "2026-09-17",
       read: 6,
@@ -513,9 +367,11 @@ const CONTENT = {
     },
     {
       id: "a5",
+      url: "https://example.com/artikel/teologi-turun-ke-ladang",
+      cta: "Baca artikel lengkap",
       tag: "Teologi",
       title: "Teologi yang Turun ke Ladang",
-      author: "Hardian Baja G.",
+      author: "Yosua Pratama",
       angk: 2012,
       date: "2026-09-02",
       read: 8,
@@ -528,9 +384,11 @@ const CONTENT = {
     },
     {
       id: "a6",
+      url: "https://example.com/artikel/setia-di-gereja-kecil",
+      cta: "Baca artikel lengkap",
       tag: "Pastoral",
       title: "Belajar Setia di Gereja yang Kecil",
-      author: "Hardian Baja G.",
+      author: "Ruth Kristiani",
       angk: 2010,
       date: "2026-08-15",
       read: 4,
@@ -548,19 +406,19 @@ const CONTENT = {
     rows: [
       {
         label: "Sekretariat",
-        value: "Institut Injil Indonesia, Batu, Jawa Timur",
+        value: "Kampus Institut Injil Indonesia, Batu, Jawa Timur",
         copy: true,
       },
       {
         label: "Email",
-        value: "emailikatanalumnii3@alumni-injil.example",
+        value: "sekretariat@alumni-injil.example",
         copy: true,
       },
       { label: "WhatsApp", value: "+62 812 0000 0000", copy: true },
-      { label: "Instagram", value: "@alumni.institut.i3", copy: true },
+      { label: "Instagram", value: "@alumni.injil.contoh", copy: true },
       {
         label: "Jam layanan",
-        value: "Senin sampai Sabtu, 08.00 sampai 16.00 WIB",
+        value: "Senin sampai Jumat, 08.00 sampai 16.00 WIB",
         copy: false,
       },
     ],
@@ -1005,6 +863,20 @@ function openReader(type, id) {
       ? `${fmt(it.date)} · ${it.by}`
       : `Oleh ${it.author} · Angkatan ${it.angk} · ${fmt(it.date)} · ${it.read} menit baca`;
   $("#rdBody").innerHTML = it.body.map((p) => `<p>${esc(p)}</p>`).join("");
+  const act = $("#rdAction");
+  const hasLink = !!it.url && /^https?:\/\//i.test(it.url);
+  let host = "";
+  if (hasLink) {
+    try {
+      host = new URL(it.url).hostname.replace(/^www\./, "");
+    } catch (e) {}
+  }
+  act.hidden = !hasLink;
+  act.innerHTML = hasLink
+    ? `<a class="btn btn-primary" href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">${esc(it.cta || "Buka tautan")} <span aria-hidden="true">↗</span></a>
+       <button class="btn btn-sm" type="button" data-action="copy" data-text="${esc(it.url)}" data-label="Tautan">Salin tautan</button>
+       <span class="rd-host">${esc(host)}</span>`
+    : "";
   openOverlay($("#reader"));
   $("#reader .panel").scrollTop = 0;
 }
@@ -1107,5 +979,5 @@ renderContact();
 renderBank();
 setupSpy();
 $("#footText").textContent =
-  `© 2026 Christian Marlen Firuli Simarmata. Soli Deo Gloria.`;
+  `© ${new Date().getFullYear()} ${CONTENT.org.fullName}. Soli Deo Gloria.`;
 $("#notice").hidden = !CONTENT.sampleNotice;
