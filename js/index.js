@@ -753,7 +753,7 @@ function renderHero() {
     <button type="button" data-action="read" data-type="article" data-id="${esc(a.id)}">
       <span class="eyebrow">Artikel terbaru</span><strong>${esc(a.title)}</strong><small>${esc(a.author)} · Angkatan ${esc(a.angk)}</small>
     </button>`;
-  const rays = $("#rays");
+  /*const rays = $("#rays");
   const cx = 200,
     cy = 372,
     r = 560,
@@ -766,7 +766,7 @@ function renderHero() {
       `${(cx + r * Math.cos(ang)).toFixed(1)},${(cy + r * Math.sin(ang)).toFixed(1)}`;
     d += `<polygon points="${cx},${cy} ${p(a1)} ${p(a2)}"/>`;
   }
-  rays.innerHTML = d;
+  rays.innerHTML = d;*/
 }
 function renderSlogan() {
   const s = CONTENT.slogan;
