@@ -460,11 +460,10 @@ const CONTENT = {
       angk: 2007,
       date: "2026-10-12",
       read: 5,
-      excerpt:
-        "Menjelaskan satu perikop dengan bahasa sehari-hari ternyata paling dekat dengan cara jemaat desa belajar.",
+      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       body: [
-        "Khotbah ekspositori sering dianggap rumit. Di desa, pendekatan ini justru bekerja baik bila perikopnya pendek, bahasanya lugas, dan contohnya diambil dari ladang, pasar, dan keluarga.",
-        "Persiapan tetap menuntut kerja keras: membaca konteks, memahami kata kunci, lalu merumuskan pesan dalam satu kalimat. Jemaat pulang membawa kalimat itu dan mengulangnya di rumah.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a odio nisl. Maecenas eu lacus mi. Duis dignissim justo dolor, non suscipit velit mollis ac. Sed pretium, justo sed fringilla iaculis, dui risus mattis lacus, consectetur lacinia erat neque ac urna.",
+        "Suspendisse rutrum odio eget nunc finibus sollicitudin non sed ipsum. Donec semper ut enim nec accumsan. Quisque ac dolor pharetra, laoreet turpis at, lacinia neque. Nunc et quam vel tortor tristique hendrerit sed pharetra urna. Nullam tempor purus vel sollicitudin accumsan.",
       ],
     },
     {
