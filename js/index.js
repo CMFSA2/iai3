@@ -476,11 +476,10 @@ const CONTENT = {
       angk: 2008,
       date: "2026-09-30",
       read: 7,
-      excerpt:
-        "Kelelahan pelayan jarang terlihat dari mimbar. Ia tampak pada hari-hari biasa yang makin sunyi.",
+      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       body: [
-        "Banyak pelayan merasa istirahat adalah kemewahan. Padahal tidur cukup, waktu bersama keluarga, dan sahabat yang jujur adalah bagian dari panggilan yang sehat.",
-        "Tulisan ini mengajak rekan alumni menetapkan satu hari libur yang dijaga, menemukan seorang mentor, dan berani meminta bantuan konselor ketika beban terasa terlalu berat.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a odio nisl. Maecenas eu lacus mi. Duis dignissim justo dolor, non suscipit velit mollis ac. Sed pretium, justo sed fringilla iaculis, dui risus mattis lacus, consectetur lacinia erat neque ac urna.",
+        "Suspendisse rutrum odio eget nunc finibus sollicitudin non sed ipsum. Donec semper ut enim nec accumsan. Quisque ac dolor pharetra, laoreet turpis at, lacinia neque. Nunc et quam vel tortor tristique hendrerit sed pharetra urna. Nullam tempor purus vel sollicitudin accumsan.",
       ],
     },
     {
@@ -493,11 +492,10 @@ const CONTENT = {
       angk: 2013,
       date: "2026-09-17",
       read: 6,
-      excerpt:
-        "Anak muda kota tidak menolak iman. Mereka menolak sikap yang tidak mau mendengar.",
+      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       body: [
-        "Di kota, anak muda hidup di antara kampus, kafe, dan ruang digital. Gereja yang ingin menjumpai mereka perlu hadir di tempat-tempat itu dengan sikap belajar.",
-        "Pelayanan yang bertahan biasanya kecil dan konsisten: kelompok diskusi mingguan, pendampingan satu lawan satu, dan ruang untuk bertanya tanpa dihakimi.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a odio nisl. Maecenas eu lacus mi. Duis dignissim justo dolor, non suscipit velit mollis ac. Sed pretium, justo sed fringilla iaculis, dui risus mattis lacus, consectetur lacinia erat neque ac urna.",
+        "Suspendisse rutrum odio eget nunc finibus sollicitudin non sed ipsum. Donec semper ut enim nec accumsan. Quisque ac dolor pharetra, laoreet turpis at, lacinia neque. Nunc et quam vel tortor tristique hendrerit sed pharetra urna. Nullam tempor purus vel sollicitudin accumsan.",
       ],
     },
     {
@@ -510,11 +508,10 @@ const CONTENT = {
       angk: 2012,
       date: "2026-09-02",
       read: 8,
-      excerpt:
-        "Teologi yang baik berakhir di dapur, ladang, dan pasar tempat jemaat bekerja.",
+      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       body: [
-        "Kuliah teologi memberi kita bahasa untuk berbicara tentang Allah. Tantangan alumni adalah memakai bahasa itu agar bisa dipahami petani, pedagang, dan ibu rumah tangga.",
-        "Penulis berbagi tiga kebiasaan: membaca teks bersama jemaat, mencatat pertanyaan mereka, lalu kembali ke buku dengan pertanyaan itu. Dengan cara ini, teologi terus diuji oleh kehidupan nyata.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a odio nisl. Maecenas eu lacus mi. Duis dignissim justo dolor, non suscipit velit mollis ac. Sed pretium, justo sed fringilla iaculis, dui risus mattis lacus, consectetur lacinia erat neque ac urna.",
+        "Suspendisse rutrum odio eget nunc finibus sollicitudin non sed ipsum. Donec semper ut enim nec accumsan. Quisque ac dolor pharetra, laoreet turpis at, lacinia neque. Nunc et quam vel tortor tristique hendrerit sed pharetra urna. Nullam tempor purus vel sollicitudin accumsan.",
       ],
     },
     {
@@ -527,11 +524,10 @@ const CONTENT = {
       angk: 2010,
       date: "2026-08-15",
       read: 4,
-      excerpt:
-        "Gereja kecil tidak menunggu menjadi besar untuk bertumbuh. Ia bertumbuh lewat kesetiaan yang tidak terlihat.",
+      excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       body: [
-        "Melayani jemaat dengan belasan anggota mengajarkan bahwa ukuran bukan tolok ukur keberhasilan. Setiap anggota dikenal namanya, pergumulannya, dan kebiasaan doanya.",
-        "Kesetiaan dalam hal kecil, seperti mengunjungi orang sakit atau menyiapkan ibadah dengan baik, membentuk gereja yang sehat. Itulah pelajaran terbesar dari sepuluh tahun pelayanan penulis.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a odio nisl. Maecenas eu lacus mi. Duis dignissim justo dolor, non suscipit velit mollis ac. Sed pretium, justo sed fringilla iaculis, dui risus mattis lacus, consectetur lacinia erat neque ac urna.",
+        "Suspendisse rutrum odio eget nunc finibus sollicitudin non sed ipsum. Donec semper ut enim nec accumsan. Quisque ac dolor pharetra, laoreet turpis at, lacinia neque. Nunc et quam vel tortor tristique hendrerit sed pharetra urna. Nullam tempor purus vel sollicitudin accumsan.",
       ],
     },
   ],
