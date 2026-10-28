@@ -1,21 +1,20 @@
 <!doctype html>
-<html>
+<html lang="id">
   <head>
-    <meta charset="utf8" />
+    <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width,initial-scale=1,viewport-fit=cover"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <link rel="icon" href="img/logo.png" />
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
     <title>IA I-3</title>
-    <meta name="claude:viewport-fit-sides" content="cover" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&display=swap"
     />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
     <a class="skip" href="#main">Lewati ke konten</a>
 
     <!--div class="notice" id="notice" role="note" hidden>
@@ -105,8 +104,8 @@
               <h1 id="heroTitle"></h1>
               <p class="lede" id="heroLede"></p>
               <div class="cta-row">
-                <a class="btn btn-primary" href="#news"
-                  >Lihat kegiatan terbaru</a
+                <a class="btn btn-primary" href="#berita"
+                  >Baca berita terbaru</a
                 >
                 <a class="btn btn-ghost" href="#rekening"
                   >Dukung pelayanan alumni</a
@@ -138,29 +137,7 @@
         </div>
       </section>
 
-      <!--section class="section" id="galeri" data-spy>
-        <div class="wrap">
-          <div class="sec-top">
-            <div class="sec-head">
-              <p class="eyebrow">Galeri</p>
-              <h2>Dokumentasi kegiatan terbaru</h2>
-              <p>
-                Klik foto untuk melihat ukuran penuh. Gunakan tombol panah di
-                papan ketik untuk berpindah foto.
-              </p>
-            </div>
-            <div
-              class="chips"
-              id="galFilters"
-              role="group"
-              aria-label="Saring galeri berdasarkan jenis kegiatan"
-            ></div>
-          </div>
-          <div class="gallery" id="gallery"></div>
-        </div>
-      </section-->
-
-      <section class="section band" id="berita" data-spy>
+      <section class="section" id="berita" data-spy>
         <div class="wrap">
           <div class="sec-top">
             <div class="sec-head">
@@ -182,7 +159,7 @@
         </div>
       </section>
 
-      <section class="section" id="pengurus" data-spy>
+      <section class="section band" id="pengurus" data-spy>
         <div class="wrap">
           <div class="sec-top">
             <div class="sec-head">
@@ -204,7 +181,7 @@
         </div>
       </section>
 
-      <section class="section band" id="artikel" data-spy>
+      <section class="section" id="artikel" data-spy>
         <div class="wrap">
           <div class="sec-head" style="margin-bottom: 28px">
             <p class="eyebrow">Artikel alumni</p>
@@ -246,7 +223,7 @@
         </div>
       </section>
 
-      <section class="section" id="kontak" data-spy>
+      <section class="section band" id="kontak" data-spy>
         <div class="wrap contact-grid">
           <div class="sec-head">
             <p class="eyebrow">Kontak</p>
@@ -267,7 +244,7 @@
         </div>
       </section>
 
-      <section class="section band" id="rekening" data-spy>
+      <section class="section" id="rekening" data-spy>
         <div class="wrap">
           <div class="sec-head" style="margin-bottom: clamp(24px, 4vw, 40px)">
             <p class="eyebrow">Informasi rekening</p>
@@ -355,49 +332,13 @@
           <button class="icon-btn" type="button" data-close>Tutup</button>
         </div>
         <div class="rd-in">
+          <div class="rd-media" id="rdMedia" hidden></div>
           <h3 id="rdTitle"></h3>
           <p class="meta-line" id="rdMeta"></p>
           <div class="rd-body" id="rdBody"></div>
           <div class="rd-actions" id="rdAction" hidden></div>
         </div>
       </article>
-    </div>
-
-    <!-- Pratinjau foto -->
-    <div
-      class="overlay"
-      id="lightbox"
-      hidden
-      role="dialog"
-      aria-modal="true"
-      aria-label="Pratinjau foto"
-    >
-      <div class="panel lb-panel">
-        <button
-          class="icon-btn lb-close"
-          type="button"
-          data-close
-          aria-label="Tutup pratinjau"
-        >
-          Tutup
-        </button>
-        <div class="lb-media" id="lbMedia"></div>
-        <div class="lb-cap">
-          <span class="tag" id="lbTag" style="justify-self: start"></span>
-          <h3 id="lbTitle"></h3>
-          <p class="meta-line" id="lbMeta"></p>
-          <p id="lbDesc"></p>
-        </div>
-        <div class="lb-ctl">
-          <button class="icon-btn" type="button" data-action="lb-prev">
-            Sebelumnya
-          </button>
-          <span class="result-count" id="lbCount" aria-live="polite"></span>
-          <button class="icon-btn" type="button" data-action="lb-next">
-            Berikutnya
-          </button>
-        </div>
-      </div>
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -407,6 +348,5 @@
         Halaman ini memerlukan JavaScript untuk menampilkan konten.
       </p></noscript
     >
-    <script src="js/index.js"></script>
   </body>
 </html>

@@ -1,7 +1,14 @@
 /* ============================================================
+   Aturan jalur gambar: nama berkas di blok CONTENT (logo, photo, img)
+   dibaca relatif terhadap index.html, bukan terhadap berkas app.js ini.
+   Jika gambar ditaruh di subfolder, tulis jalurnya dari index.html,
+   misalnya "foto/ketua.jpg".
+   ============================================================ */
+/* ============================================================
    CONTENT: ganti isi blok ini dengan data asli alumni.
-   - Foto: isi `src` dengan data URI atau berkas yang dipublikasikan
-     bersama halaman. Alamat gambar dari situs lain diblokir.
+   - Foto pengurus: isi `photo` pada tiap orang. Gambar berita: isi `img`
+     pada tiap berita. Isi dengan nama berkas yang dipublikasikan bersama
+     halaman, atau data URI. Alamat gambar dari situs lain diblokir.
    - Tanggal memakai format YYYY-MM-DD.
    - Setiap berita dan artikel punya `url` (tautan tujuan, harus diawali
      https://) dan `cta` (tulisan pada tombol). Kosongkan `url` untuk
@@ -45,91 +52,10 @@ const CONTENT = {
       },
     ],
   },
-  gallery: [
-    {
-      id: "g1",
-      tag: "Reuni",
-      title: "Reuni Akbar Alumni 2026",
-      date: "2026-10-18",
-      place: "Kampus, Batu",
-      desc: "Alumni lintas angkatan berkumpul kembali di kampus, bertukar cerita pelayanan, dan makan bersama.",
-      tone: 0,
-      src: "",
-    },
-    {
-      id: "g2",
-      tag: "Reuni",
-      title: "Ibadah Syukur Alumni",
-      date: "2026-10-18",
-      place: "Aula kampus",
-      desc: "Ibadah pembuka reuni dipimpin oleh perwakilan tiga angkatan.",
-      tone: 1,
-      src: "",
-    },
-    {
-      id: "g3",
-      tag: "Seminar",
-      title: "Seminar Misi di Kota",
-      date: "2026-10-03",
-      place: "Malang",
-      desc: "Diskusi tentang cara gereja menjumpai generasi muda perkotaan.",
-      tone: 2,
-      src: "",
-    },
-    {
-      id: "g4",
-      tag: "Seminar",
-      title: "Workshop Khotbah untuk Jemaat Kecil",
-      date: "2026-09-20",
-      place: "Surabaya",
-      desc: "Latihan menyusun khotbah singkat yang jelas dan dekat dengan kehidupan jemaat.",
-      tone: 3,
-      src: "",
-    },
-    {
-      id: "g5",
-      tag: "Pelayanan",
-      title: "Bakti Sosial di Desa Binaan",
-      date: "2026-09-06",
-      place: "Desa binaan",
-      desc: "Pelayanan kesehatan sederhana dan pembagian bahan pokok bagi keluarga di desa binaan.",
-      tone: 4,
-      src: "",
-    },
-    {
-      id: "g6",
-      tag: "Pelayanan",
-      title: "Kunjungan Pastoral ke Jemaat",
-      date: "2026-08-23",
-      place: "Jemaat mitra",
-      desc: "Tim alumni menemani jemaat mitra dalam ibadah dan percakapan pastoral.",
-      tone: 0,
-      src: "",
-    },
-    {
-      id: "g7",
-      tag: "Kampus",
-      title: "Penyambutan Alumni Baru",
-      date: "2026-08-09",
-      place: "Kampus, Batu",
-      desc: "Lulusan terbaru disambut keluarga besar alumni dalam acara sederhana.",
-      tone: 1,
-      src: "",
-    },
-    {
-      id: "g8",
-      tag: "Kampus",
-      title: "Diskusi Panel Teologi dan Budaya",
-      date: "2026-07-26",
-      place: "Kampus, Batu",
-      desc: "Alumni dan dosen membahas cara berteologi di tengah budaya yang beragam.",
-      tone: 2,
-      src: "",
-    },
-  ],
   news: [
     {
       id: "n1",
+      img: "",
       url: "https://example.com/berita/reuni-akbar-2026",
       cta: "Lihat dokumentasi lengkap",
       cat: "Kegiatan",
@@ -145,6 +71,7 @@ const CONTENT = {
     },
     {
       id: "n2",
+      img: "",
       url: "https://example.com/berita/kunjungan-jemaat-terpencil",
       cta: "Dukung pelayanan daerah",
       cat: "Pelayanan",
@@ -160,6 +87,7 @@ const CONTENT = {
     },
     {
       id: "n3",
+      img: "",
       url: "https://example.com/berita/duta-kampus",
       cta: "Daftar jadi duta kampus",
       cat: "Kampus",
@@ -175,6 +103,7 @@ const CONTENT = {
     },
     {
       id: "n4",
+      img: "",
       url: "https://example.com/berita/penahbisan-gembala-sidang",
       cta: "Kirim ucapan selamat",
       cat: "Kabar Alumni",
@@ -190,6 +119,7 @@ const CONTENT = {
     },
     {
       id: "n5",
+      img: "",
       url: "https://example.com/berita/beasiswa-alumni-tahap-2",
       cta: "Buka info beasiswa",
       cat: "Kabar Alumni",
@@ -214,6 +144,7 @@ const CONTENT = {
         people: [
           {
             name: "Pdt. Chandrawati, S.E., M.Th",
+            photo: "",
             role: "Dewan Penasehat",
             angk: 1998,
             city: "Kota Batu",
@@ -221,6 +152,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Dr. Awasuning Manaransyah",
+            photo: "",
             role: "Dewan Penasehat",
             angk: 2001,
             city: "Kota Batu",
@@ -228,6 +160,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Sudomo, D.Min",
+            photo: "",
             role: "Dewan Penasehat",
             angk: 2001,
             city: "Kota Batu",
@@ -235,6 +168,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Ridwan Hutabarat, M.Th",
+            photo: "",
             role: "Dewan Penasehat",
             angk: 2001,
             city: "Kota Batu",
@@ -242,6 +176,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Dr. Robby Wagey",
+            photo: "",
             role: "Dewan Penasehat",
             angk: 2001,
             city: "Kota Batu",
@@ -249,6 +184,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Johanes Eklemius Manuain, M.Th",
+            photo: "",
             role: "Dewan Penasehat",
             angk: 2001,
             city: "Kota Batu",
@@ -263,6 +199,7 @@ const CONTENT = {
         people: [
           {
             name: "Pdt. Hardian Baja Gunanta Tarigan, M.Div",
+            photo: "img/pengurus/ketum.png",
             role: "Ketua Umum",
             angk: 2005,
             city: "Malang",
@@ -270,6 +207,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Dr. Ronny Santoso",
+            photo: "img/pengurus/waketum1.jpg",
             role: "Wakil Ketua Umum I",
             angk: 2008,
             city: "Medan",
@@ -277,6 +215,7 @@ const CONTENT = {
           },
           {
             name: "Febri Ando Pratama Saragih, S.Th",
+            photo: "img/pengurus/waketum2.jpg",
             role: "Wakil Ketua Umum II",
             angk: 2012,
             city: "Batu",
@@ -284,6 +223,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Usada Lenno Eltho, M.Div",
+            photo: "img/pengurus/sekum.jpg",
             role: "Sekretaris Umum",
             angk: 2010,
             city: "Surabaya",
@@ -291,6 +231,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Dr. Samuel Manaransyah, M.Th",
+            photo: "img/pengurus/wasekum1.png",
             role: "Wakil Sekretaris Umum I",
             angk: 2010,
             city: "Surabaya",
@@ -298,6 +239,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. M. Asri, S.Th., M.Min",
+            photo: "img/pengurus/wasekum2.jpg",
             role: "Wakil Sekretaris Umum II",
             angk: 2010,
             city: "Surabaya",
@@ -305,6 +247,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Em. Kaston Sinaga, S.Th., M.Div",
+            photo: "img/pengurus/bendum.jpg",
             role: "Bendahara Umum",
             angk: 2010,
             city: "Surabaya",
@@ -312,6 +255,7 @@ const CONTENT = {
           },
           {
             name: "Sjenny A.K. Paath, S.Th",
+            photo: "img/pengurus/wabendum1.jpg",
             role: "Wakil Bendahara Umum I",
             angk: 2010,
             city: "Surabaya",
@@ -319,6 +263,7 @@ const CONTENT = {
           },
           {
             name: "Jusniar Napitupulu, S.Th",
+            photo: "img/pengurus/wabendum2.jpg",
             role: "Wakil Bendahara Umum II",
             angk: 2010,
             city: "Surabaya",
@@ -333,6 +278,7 @@ const CONTENT = {
         people: [
           {
             name: "Pdt. Hiras Tambunan, S.Th",
+            photo: "img/pengurus/k-bid1.png",
             role: "Ketua Bidang I: Organisasi",
             angk: 2007,
             city: "Kupang",
@@ -340,6 +286,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Yafet Mandiangan, S.Th",
+            photo: "img/pengurus/bid1-y.jpg",
             role: "Bidang I : Organisasi",
             angk: 2013,
             city: "Jakarta",
@@ -347,6 +294,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Dr. Sarmauli, M.Th",
+            photo: "img/pengurus/k-bid2.jpg",
             role: "Ketua Bidang II : Pendidikan & Pengajaran",
             angk: 2011,
             city: "Denpasar",
@@ -354,6 +302,7 @@ const CONTENT = {
           },
           {
             name: "Detrina Nokas, S.Th., M.Pd",
+            photo: "img/pengurus/bid2-d.jpg",
             role: "Bidang II Sub Bidang: Kegiatan Persekutuan Alumni",
             angk: 2015,
             city: "Bandung",
@@ -361,6 +310,7 @@ const CONTENT = {
           },
           {
             name: "Sylvia Irani Takaliuang, S.E., M.Th",
+            photo: "img/pengurus/bid2-s.jpg",
             role: "Bidang II Sub Bidang: Kegiatan Persekutuan Alumni",
             angk: 2015,
             city: "Bandung",
@@ -368,6 +318,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Dr. Jammes J. Takaliuang, S.S.",
+            photo: "img/pengurus/k-bid3.jpg",
             role: "Ketua Bidang III: Penelitian dan Pengembangan",
             angk: 2015,
             city: "Bandung",
@@ -375,6 +326,7 @@ const CONTENT = {
           },
           {
             name: "Josina Riruma, S.H., M.Th",
+            photo: "img/pengurus/bid3-j.jpg",
             role: "Bidang III Sub Bidang: Pendataan & Pelaksanaan Kegiatan Alumni",
             angk: 2015,
             city: "Bandung",
@@ -382,6 +334,7 @@ const CONTENT = {
           },
           {
             name: "Ubat Pahala Charles Silalahi, M.Phil",
+            photo: "img/pengurus/bid3-u.png",
             role: "Bidang III Sub Bidang: Pendataan & Pelaksanaan Kegiatan Alumni",
             angk: 2015,
             city: "Bandung",
@@ -389,6 +342,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Dr. Rio Janto Pardede",
+            photo: "img/pengurus/k-bid4.jpg",
             role: "Ketua Bidang IV: Kemitraan & PKM",
             angk: 2015,
             city: "Bandung",
@@ -396,6 +350,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Imanuel Pandu,S.Mis., M.Pdk",
+            photo: "img/pengurus/bid4-i.jpg",
             role: "Bidang IV Sub Bidang: Tanggap Darurat & Pemerhati",
             angk: 2015,
             city: "Bandung",
@@ -403,6 +358,7 @@ const CONTENT = {
           },
           {
             name: "Ps. Nataniel Randakila, M.Th",
+            photo: "img/pengurus/bid4-n.jpg",
             role: "Bidang IV Sub Bidang: Tanggap Darurat & Pemerhati",
             angk: 2015,
             city: "Bandung",
@@ -410,6 +366,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Dr. Iwan Setiawan, M.Th",
+            photo: "img/pengurus/humas-i.jpg",
             role: "Sub Bidang: Humas",
             angk: 2015,
             city: "Bandung",
@@ -417,6 +374,7 @@ const CONTENT = {
           },
           {
             name: "Pdm. Robert Hia, M.Th",
+            photo: "img/pengurus/humas-r.jpg",
             role: "Sub Bidang: Humas",
             angk: 2015,
             city: "Bandung",
@@ -424,6 +382,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Paulina Rouli, M.Th",
+            photo: "img/pengurus/doa-p.jpg",
             role: "Sub Bidang: Doa",
             angk: 2015,
             city: "Bandung",
@@ -431,6 +390,7 @@ const CONTENT = {
           },
           {
             name: "Pdt. Sontinar Hutasoit, B.Th",
+            photo: "img/pengurus/doa-s.jpg",
             role: "Sub Bidang: Doa",
             angk: 2015,
             city: "Bandung",
@@ -438,6 +398,7 @@ const CONTENT = {
           },
           {
             name: "Grace Enting Alfrianne Illu, S.Th",
+            photo: "img/pengurus/k-bid5.jpg",
             role: "Ketua Bidang V : IT Publikasi",
             angk: 2015,
             city: "Bandung",
@@ -445,6 +406,7 @@ const CONTENT = {
           },
           {
             name: "Yosia Kristianto, S.Th",
+            photo: "img/pengurus/bid5-y.jpg",
             role: "Bidang V : IT Publikasi",
             angk: 2015,
             city: "Bandung",
@@ -452,6 +414,7 @@ const CONTENT = {
           },
           {
             name: "Ruth Fulcher Hutabarat, S.Th",
+            photo: "",
             role: "Bidang V : IT Publikasi",
             angk: 2019,
             city: "Batam",
@@ -459,6 +422,7 @@ const CONTENT = {
           },
           {
             name: "Christian M.F Simarmata, S.Th",
+            photo: "img/pengurus/bid5-c.jpg",
             role: "Bidang V : IT Publikasi",
             angk: 2019,
             city: "Bengkulu",
@@ -633,13 +597,9 @@ const esc = (s) =>
   String(s).replace(
     /[&<>"']/g,
     (c) =>
-      ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#39;",
-      })[c],
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+        c
+      ],
   );
 const toDate = (iso) => new Date(iso + "T00:00:00");
 const fmt = (iso) =>
@@ -649,17 +609,29 @@ const fmt = (iso) =>
     year: "numeric",
   });
 const byNew = (a, b) => (a.date < b.date ? 1 : -1);
-const SPOTS = [
-  [72, 28],
-  [28, 34],
-  [64, 62],
-  [35, 70],
-  [80, 45],
-];
 const groupNum = (n) =>
   String(n)
     .replace(/(\d{4})(?=\d)/g, "$1 ")
     .trim();
+
+/* Gambar yang gagal dimuat (jalur salah, berkas belum ada) diganti penampung,
+   supaya tidak muncul ikon rusak dan teks alt yang melebar. */
+document.addEventListener(
+  "error",
+  (e) => {
+    const el = e.target;
+    if (!el || el.tagName !== "IMG") return;
+    if (el.closest("#heroLogo, #brandLogo"))
+      el.replaceWith(
+        Object.assign(document.createElement("span"), {
+          className: "logo-fallback",
+          textContent: "IA I-3",
+        }),
+      );
+    else el.remove();
+  },
+  true,
+);
 
 let toastTimer;
 function toast(msg) {
@@ -697,7 +669,6 @@ async function copyText(text, label) {
 /* ---------- Navigasi dan tema ---------- */
 const NAV = [
   ["slogan", "Slogan", "Nilai dan semangat kita"],
-  /*["galeri", "Galeri", "Foto kegiatan terbaru"],*/
   ["berita", "Berita", "Kabar dari sesama alumni"],
   ["pengurus", "Pengurus", "Susunan pengurus alumni"],
   ["artikel", "Artikel", "Tulisan dari ladang pelayanan"],
@@ -823,53 +794,13 @@ function renderSlogan() {
     .join("");
 }
 
-/* ---------- Galeri ---------- */
-let galFilter = "Semua",
-  lbList = [],
-  lbIndex = 0;
-const galTags = () => ["Semua", ...new Set(CONTENT.gallery.map((g) => g.tag))];
-function media(item, i) {
-  const [sx, sy] = SPOTS[i % SPOTS.length];
-  const img = item.src
-    ? `<img src="${esc(item.src)}" alt="${esc(item.title)}" loading="lazy">`
+/* ---------- Foto ---------- */
+/* Kotak foto: memakai gambar bila ada, selain itu gradasi penampung. */
+function photoBox(tone, src, alt) {
+  const img = src
+    ? `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" decoding="async">`
     : "";
-  return `<span class="ph tone-${item.tone % 5}" style="--sx:${sx}%;--sy:${sy}%">${img}</span>`;
-}
-function renderGalFilters() {
-  $("#galFilters").innerHTML = galTags()
-    .map(
-      (t) =>
-        `<button class="chip" type="button" data-action="gal-filter" data-v="${esc(t)}" aria-pressed="${t === galFilter}">${esc(t)}</button>`,
-    )
-    .join("");
-}
-function renderGallery() {
-  lbList = CONTENT.gallery
-    .filter((g) => galFilter === "Semua" || g.tag === galFilter)
-    .sort(byNew);
-  const el = $("#gallery");
-  el.classList.toggle("is-filtered", galFilter !== "Semua");
-  el.innerHTML = lbList
-    .map(
-      (g, i) => `
-    <button class="g-item" type="button" data-action="photo" data-i="${i}" aria-label="Buka foto: ${esc(g.title)}">
-      ${media(g, i)}
-      <span class="g-cap"><span class="tag">${esc(g.tag)}</span><strong>${esc(g.title)}</strong><small>${fmt(g.date)} · ${esc(g.place)}</small></span>
-    </button>`,
-    )
-    .join("");
-  renderGalFilters();
-}
-function showPhoto(i) {
-  lbIndex = (i + lbList.length) % lbList.length;
-  const g = lbList[lbIndex];
-  const note = g.src ? "" : `<span class="lb-note">Foto belum diunggah</span>`;
-  $("#lbMedia").innerHTML = media(g, lbIndex) + note;
-  $("#lbTag").textContent = g.tag;
-  $("#lbTitle").textContent = g.title;
-  $("#lbMeta").textContent = `${fmt(g.date)} · ${g.place}`;
-  $("#lbDesc").textContent = g.desc;
-  $("#lbCount").textContent = `${lbIndex + 1} dari ${lbList.length}`;
+  return `<span class="ph tone-${tone % 5}">${img}</span>`;
 }
 
 /* ---------- Berita ---------- */
@@ -889,7 +820,7 @@ function renderNews() {
   const rest = list.slice(1);
   const feature = `
     <button class="news-feature" type="button" data-action="read" data-type="news" data-id="${esc(f.id)}">
-      <span class="nf-media"><span class="ph tone-${(CONTENT.news.indexOf(f) + 1) % 5}" style="--sx:70%;--sy:34%"></span></span>
+      <span class="nf-media">${photoBox(CONTENT.news.indexOf(f) + 1, f.img, f.title)}</span>
       <span class="nf-body">
         <span class="meta-line"><span class="tag">${esc(f.cat)}</span><span>${fmt(f.date)}</span></span>
         <h3>${esc(f.title)}</h3>
@@ -899,11 +830,10 @@ function renderNews() {
     </button>`;
   const rows = rest
     .map((n) => {
-      const d = toDate(n.date);
       return `
     <button class="news-row" type="button" data-action="read" data-type="news" data-id="${esc(n.id)}">
-      <span class="nr-date"><b>${d.getDate()}</b><span>${d.toLocaleDateString("id-ID", { month: "short" })}</span></span>
-      <span class="nr-main"><span class="tag">${esc(n.cat)}</span><span class="nr-title">${esc(n.title)}</span></span>
+      <span class="nr-main"><span class="meta-line"><span class="tag">${esc(n.cat)}</span><span>${fmt(n.date)}</span></span><span class="nr-title">${esc(n.title)}</span></span>
+      <span class="nr-thumb">${photoBox(CONTENT.news.indexOf(n) + 1, n.img, n.title)}</span>
     </button>`;
     })
     .join("");
@@ -942,10 +872,12 @@ function renderBoard() {
         .map(
           (p) => `
         <div class="person">
-          <span class="avatar tone-${p.tone % 5}" aria-hidden="true">${esc(initials(p.name))}</span>
-          <span class="role">${esc(p.role)}</span>
-          <span class="name">${esc(p.name)}</span>
-          <span class="sub">Angkatan ${esc(p.angk)} · ${esc(p.city)}</span>
+          <span class="p-photo">${photoBox(p.tone, p.photo, p.name)}${p.photo ? "" : `<span class="p-init" aria-hidden="true">${esc(initials(p.name))}</span>`}</span>
+          <span class="p-info">
+            <span class="role">${esc(p.role)}</span>
+            <span class="name">${esc(p.name)}</span>
+            <span class="sub">Angkatan ${esc(p.angk)} · ${esc(p.city)}</span>
+          </span>
         </div>`,
         )
         .join("")}</div>
@@ -1043,7 +975,7 @@ function updateMsg() {
   const angk = $("#f-angk").value.trim() || "[tahun angkatan]";
   const nom = $("#f-nominal").value.trim() || "[nominal]";
   $("#f-out").value =
-    `Shalom, Pengurus ${CONTENT.org.fullName}.\n\nSaya ${nama} (Angkatan ${angk}) sudah mentransfer ${nom} untuk ${acc.purpose.toLowerCase()} ke rekening ${acc.bank} ${acc.number} a.n. ${acc.holder}.\n\nBukti transfer saya lampirkan. Terima kasih.`;
+    `Shalom, Bendahara ${CONTENT.org.fullName}.\n\nSaya ${nama} (Angkatan ${angk}) sudah mentransfer ${nom} untuk ${acc.purpose.toLowerCase()} ke rekening ${acc.bank} ${acc.number} a.n. ${acc.holder}.\n\nBukti transfer saya lampirkan. Terima kasih.`;
 }
 
 /* ---------- Overlay ---------- */
@@ -1055,14 +987,14 @@ function openOverlay(el) {
   el.hidden = false;
   document.documentElement.classList.add("lock");
   const c = el.querySelector("[data-close]");
-  if (c) c.focus();
+  if (c) c.focus({ preventScroll: true });
 }
 function closeOverlay() {
   if (!openEl) return;
   openEl.hidden = true;
   openEl = null;
   document.documentElement.classList.remove("lock");
-  if (lastFocus && lastFocus.focus) lastFocus.focus();
+  if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
 }
 function openReader(type, id) {
   const list = type === "news" ? CONTENT.news : CONTENT.articles;
@@ -1076,6 +1008,12 @@ function openReader(type, id) {
       ? `${fmt(it.date)} · ${it.by}`
       : `Oleh ${it.author} · Angkatan ${it.angk} · ${fmt(it.date)} · ${it.read} menit baca`;
   $("#rdBody").innerHTML = it.body.map((p) => `<p>${esc(p)}</p>`).join("");
+  const rm = $("#rdMedia");
+  const showImg = type === "news" && !!it.img;
+  rm.hidden = !showImg;
+  rm.innerHTML = showImg
+    ? photoBox(list.indexOf(it) + 1, it.img, it.title)
+    : "";
   const act = $("#rdAction");
   const hasLink = !!it.url && /^https?:\/\//i.test(it.url);
   let host = "";
@@ -1121,14 +1059,6 @@ document.addEventListener("click", (e) => {
     } catch (err) {}
   } else if (a === "menu") toggleMenu();
   else if (a === "dismiss-notice") $("#notice").hidden = true;
-  else if (a === "gal-filter") {
-    galFilter = t.dataset.v;
-    renderGallery();
-  } else if (a === "photo") {
-    showPhoto(+t.dataset.i);
-    openOverlay($("#lightbox"));
-  } else if (a === "lb-prev") showPhoto(lbIndex - 1);
-  else if (a === "lb-next") showPhoto(lbIndex + 1);
   else if (a === "news-filter") {
     newsFilter = t.dataset.v;
     renderNews();
@@ -1161,10 +1091,6 @@ document.addEventListener("keydown", (e) => {
     closeOverlay();
     return;
   }
-  if (openEl.id === "lightbox") {
-    if (e.key === "ArrowLeft") showPhoto(lbIndex - 1);
-    if (e.key === "ArrowRight") showPhoto(lbIndex + 1);
-  }
   if (e.key === "Tab") {
     const f = $$("button,[href],input,select,textarea", openEl).filter(
       (x) => !x.disabled,
@@ -1192,7 +1118,6 @@ $("#f-tujuan").addEventListener("change", updateMsg);
 renderNav();
 renderHero();
 renderSlogan();
-/*renderGallery();*/
 renderNews();
 renderBoard();
 renderArticles();
@@ -1201,5 +1126,5 @@ renderBank();
 setupSpy();
 setupInk();
 $("#footText").textContent =
-  `© ${new Date().getFullYear()} ${CONTENT.org.fullName}. Soli Deo Gloria.`;
+  `© Christian Marlen Firuli Simarmata. Salus Animarum Suprema Lex.`;
 $("#notice").hidden = !CONTENT.sampleNotice;
