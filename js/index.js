@@ -56,7 +56,7 @@ const CONTENT = {
     {
       id: "n1",
       img: "",
-      url: "https://cmfsa2.github.io/iai3/article1",
+      url: "https://example.com/berita/reuni-akbar-2026",
       cta: "Lihat dokumentasi lengkap",
       cat: "Kegiatan",
       title: "Reuni Akbar Alumni 2026 Berlangsung Hangat di Batu",
@@ -435,7 +435,7 @@ const CONTENT = {
   articles: [
     {
       id: "a1",
-      url: "https://example.com/artikel/menggembalakan-di-era-informasi",
+      url: "https://cmfsa2.github.io/iai3/article1",
       cta: "Baca artikel lengkap",
       tag: "Pastoral",
       title: "Menggembalakan Jemaat di Tengah Banjir Informasi",
