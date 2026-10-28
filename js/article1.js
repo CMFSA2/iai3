@@ -26,7 +26,7 @@ const CONTENT = {
     fullName: "Ikatan Alumni Institut Injil Indonesia",
     logo: "img/logo.png",
   },
-  site: { home: "index.html" },
+  site: { home: "https://cmfsa2.github.io/iai3/" },
   post: {
     type: "artikel",
     category: "Kegiatan",
