@@ -1042,7 +1042,7 @@ function openReader(type, id) {
   act.innerHTML = hasLink
     ? `<a class="btn btn-primary"
        href="${esc(it.url)}"
-       target="_blank"
+       target="_self"
        rel="noopener noreferrer">
        ${esc(it.cta || "Buka halaman HTML")}
        <span aria-hidden="true">↗</span>
