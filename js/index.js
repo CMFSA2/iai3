@@ -444,10 +444,10 @@ const CONTENT = {
       date: "2026-10-21",
       read: 6,
       excerpt:
-        "Jemaat kini membawa ribuan suara ke dalam ibadah lewat ponselnya. Gembala perlu belajar menjadi penuntun, bukan pesaing.",
+        "Sebuah visi yang lahir dari pergumulan reflektif seorang pemimpin yang telah diberi kepercayaan.",
       body: [
-        "Hampir semua anggota jemaat membuka ponsel sebelum membuka Alkitab. Gembala tidak bisa menutup arus itu, tetapi bisa membantu jemaat menimbang apa yang mereka baca dan dengar.",
-        "Mulailah dengan hal sederhana: sediakan waktu tanya jawab setelah khotbah, rekomendasikan sumber bacaan yang sehat, dan hadir lebih sering dalam percakapan pribadi. Kehadiran yang konsisten lebih meyakinkan daripada bantahan yang panjang.",
+        "Organisasi yang baik bukan hanya organisasi yang bertahan pada masa kepemimpinan saat ini, melainkan organisasi yang mampu mewariskan visi, membentuk pemimpin baru, dan menjaga misi tetap hidup setelah generasi pemimpinnya berganti.",
+        "Saya ingin melihat alumni memandang almamater seperti rumah rohani yang selalu dirindukan, tempat kita bisa kembali untuk memperbarui visi dan semangat pelayanan. Kesatuan ini bukan tentang formalitas; ini tentang bagaimana alumni melihat almamater sebagai bagian dari panggilan Tuhan dalam hidup mereka.",
       ],
     },
     {
