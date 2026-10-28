@@ -435,7 +435,7 @@ const CONTENT = {
   articles: [
     {
       id: "a1",
-      url: "/article1.html",
+      url: "article1.html",
       cta: "Baca artikel lengkap",
       tag: "Visi",
       title: "Mau Dibawa ke Mana Ikatan Alumni?",
