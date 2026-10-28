@@ -56,7 +56,7 @@ const CONTENT = {
     {
       id: "n1",
       img: "",
-      url: "https://example.com/berita/reuni-akbar-2026",
+      url: "https://cmfsa2.github.io/iai3/article1",
       cta: "Lihat dokumentasi lengkap",
       cat: "Kegiatan",
       title: "Reuni Akbar Alumni 2026 Berlangsung Hangat di Batu",
