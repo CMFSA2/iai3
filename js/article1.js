@@ -26,7 +26,7 @@ const CONTENT = {
     fullName: "Ikatan Alumni Institut Injil Indonesia",
     logo: "img/logo.png",
   },
-  site: { home: "/index.html" },
+  site: { home: "index.html" },
   post: {
     type: "artikel",
     category: "Kegiatan",
@@ -49,7 +49,7 @@ const CONTENT = {
     },
     facts: [
       { label: "Tanggal", value: "18 Oktober 2026" },
-      { label: "Tempat", value: "Institut Injil Indonesia, Batu" },
+      { label: "Tempat", value: "Kampus Institut Injil Indonesia, Batu" },
       { label: "Penyelenggara", value: "Ikatan Alumni I-3" },
       { label: "Peserta", value: "Alumni lintas angkatan" },
     ],
