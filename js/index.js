@@ -435,7 +435,7 @@ const CONTENT = {
   articles: [
     {
       id: "a1",
-      url: "https://cmfsa2.github.io/iai3/article1",
+      url: "/index.html",
       cta: "Baca artikel lengkap",
       tag: "Visi",
       title: "Mau Dibawa ke Mana Ikatan Alumni?",
@@ -1014,20 +1014,49 @@ function openReader(type, id) {
   rm.innerHTML = showImg
     ? photoBox(list.indexOf(it) + 1, it.img, it.title)
     : "";
+
   const act = $("#rdAction");
-  const hasLink = !!it.url && /^https?:\/\//i.test(it.url);
+
+  // Menerima URL online atau jalur file HTML relatif
+  const hasLink =
+    !!it.url &&
+    (/^https?:\/\//i.test(it.url) ||
+      /^(?!file:)[^:]+\.html?(?:[?#].*)?$/i.test(it.url) ||
+      /^\.{1,2}\//.test(it.url) ||
+      /^\//.test(it.url));
+
   let host = "";
+
   if (hasLink) {
     try {
-      host = new URL(it.url).hostname.replace(/^www\./, "");
-    } catch (e) {}
+      host = /^https?:\/\//i.test(it.url)
+        ? new URL(it.url).hostname.replace(/^www\./, "")
+        : "Halaman HTML";
+    } catch (e) {
+      host = "Halaman HTML";
+    }
   }
+
   act.hidden = !hasLink;
+
   act.innerHTML = hasLink
-    ? `<a class="btn btn-primary" href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">${esc(it.cta || "Buka tautan")} <span aria-hidden="true">↗</span></a>
-       <button class="btn btn-sm" type="button" data-action="copy" data-text="${esc(it.url)}" data-label="Tautan">Salin tautan</button>
-       <span class="rd-host">${esc(host)}</span>`
+    ? `<a class="btn btn-primary"
+       href="${esc(it.url)}"
+       target="_blank"
+       rel="noopener noreferrer">
+       ${esc(it.cta || "Buka halaman HTML")}
+       <span aria-hidden="true">↗</span>
+     </a>
+     <button class="btn btn-sm"
+       type="button"
+       data-action="copy"
+       data-text="${esc(it.url)}"
+       data-label="Tautan">
+       Salin tautan
+     </button>
+     <span class="rd-host">${esc(host)}</span>`
     : "";
+
   openOverlay($("#reader"));
   $("#reader .panel").scrollTop = 0;
 }
