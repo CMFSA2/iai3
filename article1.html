@@ -233,13 +233,13 @@
 
     <script>
       /* Data halaman ini. Ganti isinya, simpan, lalu muat ulang di browser.
-   - post.type: "berita" atau "artikel". Tanda *bintang* pada title menyorot frasa.
-   - Gambar: isi cover.src dan src pada blok "figure" dengan nama berkas gambar,
-     dibaca relatif terhadap berkas HTML ini. Kosong = penampung foto.
-   - post.blocks: jenis blok h2, p, list, quote, figure. Teks **tebal** memakai dua bintang.
-   - post.related[].url: nama berkas HTML lokal, dibuka di tab yang sama.
-   - post.link.url: tautan https:// opsional. Kosong = tombol tautan disembunyikan.
-   - site.home: halaman utama. Menu di halaman ini membuka bagian-bagiannya. */
+      - post.type: "berita" atau "artikel". Tanda *bintang* pada title menyorot frasa.
+      - Gambar: isi cover.src dan src pada blok "figure" dengan nama berkas gambar,
+        dibaca relatif terhadap berkas HTML ini. Kosong = penampung foto.
+      - post.blocks: jenis blok h2, p, list, quote, figure. Teks **tebal** memakai dua bintang.
+      - post.related[].url: nama berkas HTML lokal, dibuka di tab yang sama.
+      - post.link.url: tautan https:// opsional. Kosong = tombol tautan disembunyikan.
+      - site.home: halaman utama. Menu di halaman ini membuka bagian-bagiannya. */
       const CONTENT = {
         sampleNotice: true,
         org: {
@@ -277,7 +277,7 @@
             },
             {
               label: "Topik",
-              value: "Visi",
+              value: "Visi Ikatan Alumni I-3",
             },
             {
               label: "Penulis",
@@ -286,16 +286,20 @@
           ],
           blocks: [
             {
+              t: "h2",
+              text: "Berawal dari 1 Pertanyaan Sederhana",
+            },
+            {
               t: "p",
               text: "Saat saya menerima tongkat estafet sebagai Ketua Umum Ikatan Alumni Institut Injil Indonesia, satu pertanyaan sederhana namun mendalam melintas di benak saya: Mau dibawa ke mana Ikatan Alumni ini? Jangan-jangan jawabannya ada di lagunya Armada, 'Mau dibawa ke mana hubungan kita.' Tapi tunggu dulu, ini bukan soal hubungan asmara, melainkan soal hubungan besar: hubungan alumni dengan almamater, alumni senior dengan junior, dan yang paling penting, hubungan visi dengan aksi nyata. Ada 3 hal penting yang menjadi perenungan pribadi saya dalam beberapa waktu belakangan ini, yang menurut saya juga relevan dalam pelaksanaan Natal Ikatan Alumni I3 pada 20 Januari 2025.",
             },
             {
               t: "h2",
-              text: "Visi Kesatuan Alumni-Almamater: Melampaui Ikatan Administratif.",
+              text: "Kesatuan Alumni-Almamater",
             },
             {
               t: "p",
-              text: "Hubungan alumni dengan almamater itu sebenarnya unik, ibarat hubungan anak dengan orang tua-kadang mesra, kadang berjarak, tapi tetap ada ikatan darah rohani yang tak bisa diputuskan. Kita tidak akan lupa dari mana kita berasal, karena dari sanalah Tuhan memulai pekerjaan besar-Nya dalam hidup kita. Kita semua punya kenangan manis—doa subuh yang mengantuk, Kerja praktis pagi dan sore, diskusi teologi sampai larut malam, pelayanan di pelosok yang penuh tantangan, bahkan makan di kantate atau dapur seadanya. Tapi, mari kita jujur. Seiring berjalannya waktu, hubungan ini sering kali mengalami jarak. Almamater mungkin sudah menjadi tempat yang kita tinggalkan bertahun-tahun lalu, dan bagi sebagian orang, hubungan dengan almamater terasa lebih seperti kewajiban administratif daripada hubungan emosional.",
+              text: "Visi Kesatuan Alumni-Almamater: Melampaui Ikatan Administratif. Hubungan alumni dengan almamater itu sebenarnya unik, ibarat hubungan anak dengan orang tua-kadang mesra, kadang berjarak, tapi tetap ada ikatan darah rohani yang tak bisa diputuskan. Kita tidak akan lupa dari mana kita berasal, karena dari sanalah Tuhan memulai pekerjaan besar-Nya dalam hidup kita. Kita semua punya kenangan manis—doa subuh yang mengantuk, Kerja praktis pagi dan sore, diskusi teologi sampai larut malam, pelayanan di pelosok yang penuh tantangan, bahkan makan di kantate atau dapur seadanya. Tapi, mari kita jujur. Seiring berjalannya waktu, hubungan ini sering kali mengalami jarak. Almamater mungkin sudah menjadi tempat yang kita tinggalkan bertahun-tahun lalu, dan bagi sebagian orang, hubungan dengan almamater terasa lebih seperti kewajiban administratif daripada hubungan emosional.",
             },
             {
               t: "p",
@@ -327,11 +331,11 @@
             },
             {
               t: "h2",
-              text: "Visi Kesatuan Alumni Senior-Junior: Regenerasi untuk Keberlanjutan Kepemimpinan",
+              text: "Kesatuan Alumni Senior-Junior",
             },
             {
               t: "p",
-              text: "Hubungan antara alumni senior dan junior sering kali menjadi dilema klasik dalam sebuah organisasi. Di satu sisi, para senior merasa memiliki pengalaman dan kontribusi besar yang tak ternilai, namun di sisi lain, para junior sering merasa mereka hanya “anak bawang” yang belum punya tempat di meja kepemimpinan. Kalau kita tidak hati-hati, hubungan ini bisa seperti film drama konflik keluarga: senior sibuk mendikte, junior sibuk mencari kesempatan untuk bersuara. Akhirnya? Yang ada hanya kesenjangan, bukan kesatuan.",
+              text: "Visi Kesatuan Alumni Senior-Junior: Regenerasi untuk Keberlanjutan Kepemimpinan. Hubungan antara alumni senior dan junior sering kali menjadi dilema klasik dalam sebuah organisasi. Di satu sisi, para senior merasa memiliki pengalaman dan kontribusi besar yang tak ternilai, namun di sisi lain, para junior sering merasa mereka hanya “anak bawang” yang belum punya tempat di meja kepemimpinan. Kalau kita tidak hati-hati, hubungan ini bisa seperti film drama konflik keluarga: senior sibuk mendikte, junior sibuk mencari kesempatan untuk bersuara. Akhirnya? Yang ada hanya kesenjangan, bukan kesatuan.",
             },
             {
               t: "p",
@@ -355,21 +359,21 @@
               cite: "Hardian Baja G. Tarigan, Angkatan 2008",
             },
             /*{
-        t: "p",
-        text: "Ada tiga kebutuhan yang paling sering disebut peserta:",
-      },
-      {
-        t: "list",
-        items: [
-          "Pelatihan bagi pelayan awam di jemaat kecil.",
-          "Pendampingan pastoral bagi gembala yang melayani sendirian.",
-          "Bahan ajar yang mudah dipakai di jemaat dengan sumber daya terbatas.",
-        ],
-      },*/
+           t: "p",
+           text: "Ada tiga kebutuhan yang paling sering disebut peserta:",
+         },
+         {
+           t: "list",
+           items: [
+             "Pelatihan bagi pelayan awam di jemaat kecil.",
+             "Pendampingan pastoral bagi gembala yang melayani sendirian.",
+             "Bahan ajar yang mudah dipakai di jemaat dengan sumber daya terbatas.",
+           ],
+         },*/
             { t: "h2", text: "Vision Resiliency and Mission Sustainability" },
             {
               t: "p",
-              text: "Istilah Vision Resiliency dan Mission Sustainability terdengar seperti jargon organisasi modern yang sering kita baca di buku manajemen. Tapi bagi saya, kedua konsep ini lebih dari sekadar teori: ini adalah panggilan rohani. Kita berbicara tentang memastikan bahwa visi kita tetap kuat di tengah badai perubahan dan bahwa misi kita tidak hanya bertahan, tetapi terus berkembang melampaui generasi dan tantangan zaman. Ketika saya berbicara tentang visi dan misi, saya tidak bicara tentang rencana lima tahun yang hanya selesai di atas kertas. Lebih jauh lagi, Vision Resiliency dan Mission Sustainability adalah tentang membangun masa depan yang tidak hanya bertahan tetapi juga berbuah lebat. Ini tentang memastikan bahwa visi dan misi yang Tuhan berikan kepada kita tidak berhenti di generasi ini, tetapi terus hidup dan membawa dampak di generasi berikutnya.",
+              text: "Vision Resiliency and Mission Sustainability. Istilah Vision Resiliency dan Mission Sustainability terdengar seperti jargon organisasi modern yang sering kita baca di buku manajemen. Tapi bagi saya, kedua konsep ini lebih dari sekadar teori: ini adalah panggilan rohani. Kita berbicara tentang memastikan bahwa visi kita tetap kuat di tengah badai perubahan dan bahwa misi kita tidak hanya bertahan, tetapi terus berkembang melampaui generasi dan tantangan zaman. Ketika saya berbicara tentang visi dan misi, saya tidak bicara tentang rencana lima tahun yang hanya selesai di atas kertas. Lebih jauh lagi, Vision Resiliency dan Mission Sustainability adalah tentang membangun masa depan yang tidak hanya bertahan tetapi juga berbuah lebat. Ini tentang memastikan bahwa visi dan misi yang Tuhan berikan kepada kita tidak berhenti di generasi ini, tetapi terus hidup dan membawa dampak di generasi berikutnya.",
             },
             {
               t: "p",
@@ -402,12 +406,7 @@
               text: "“Mau dibawa ke mana Ikatan Alumni ini?” Jawabannya sederhana: ke arah yang Tuhan kehendaki. Saya tidak bisa melakukannya sendirian, dan tidak seharusnya sendirian. Ini adalah perjalanan bersama, dengan Tuhan sebagai nahkoda, alumni sebagai awak kapal, dan almamater sebagai pelabuhan hati kita. Jadi, mari bergandengan tangan, senior dan junior, alumni dan alma mater, membawa visi besar ini hingga menjadi warisan yang berdampak bagi generasi selanjutnya. Karena pada akhirnya, yang lebih penting dari ke mana kita membawa Ikatan Alumni adalah siapa yang kita bawa dalam perjalanan ini. Dan saya percaya, kita sedang membawa nama Kristus. Mari melangkah bersama. Jangan lupa, this is our mission. Tuhan memberkati pelayanan kita.",
             },
           ],
-          tags: [
-            "Visi",
-            "Persekutuan Alumni",
-            "Ketua Umum IA I-3",
-            "Ikatan Alumni I-3",
-          ],
+          tags: ["Visi", "Ketua Umum", "ketua umum", "Ikatan Alumni I-3"],
           link: {
             url: "",
             cta: "Lihat Dokumentasi Lengkap",
