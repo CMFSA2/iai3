@@ -10,10 +10,13 @@
      pada tiap berita. Isi dengan nama berkas yang dipublikasikan bersama
      halaman, atau data URI. Alamat gambar dari situs lain diblokir.
    - Tanggal memakai format YYYY-MM-DD.
-   - Setiap berita dan artikel punya `url` (tautan tujuan, harus diawali
-     https://) dan `cta` (tulisan pada tombol). Kosongkan `url` untuk
-     menyembunyikan tombol pada item itu. Tautan contoh di bawah
-     mengarah ke example.com dan perlu diganti.
+   - Setiap berita dan artikel punya `file` (nama berkas HTML lokal yang
+     dibuka di tab yang sama) dan `cta` (tulisan pada tombol). Tulis
+     jalurnya relatif terhadap index.html, misalnya
+     "berita-reuni-akbar-2026.html" atau "berita/reuni.html". Hanya berkas
+     .html atau .htm yang diterima. Kosongkan `file` untuk menyembunyikan
+     tombol pada item itu. Berkas contoh sudah disediakan di folder yang
+     sama dengan index.html.
    - Logo ikatan alumni: org.logo berisi nama berkas logo yang dipublikasikan
      bersama halaman (atau data URI). org.verse tampil di bawah logo hero.
    - Set sampleNotice ke false untuk menyembunyikan pita contoh.
@@ -56,7 +59,7 @@ const CONTENT = {
     {
       id: "n1",
       img: "",
-      url: "https://example.com/berita/reuni-akbar-2026",
+      file: "",
       cta: "Lihat dokumentasi lengkap",
       cat: "Kegiatan",
       title: "Reuni Akbar Alumni 2026 Berlangsung Hangat di Batu",
@@ -72,7 +75,7 @@ const CONTENT = {
     {
       id: "n2",
       img: "",
-      url: "https://example.com/berita/kunjungan-jemaat-terpencil",
+      file: "",
       cta: "Dukung pelayanan daerah",
       cat: "Pelayanan",
       title: "Tim Alumni Mengunjungi Jemaat di Daerah Terpencil",
@@ -88,7 +91,7 @@ const CONTENT = {
     {
       id: "n3",
       img: "",
-      url: "https://example.com/berita/duta-kampus",
+      file: "",
       cta: "Daftar jadi duta kampus",
       cat: "Kampus",
       title: "Alumni Diajak Menjadi Duta Kampus pada Penerimaan Mahasiswa Baru",
@@ -104,7 +107,7 @@ const CONTENT = {
     {
       id: "n4",
       img: "",
-      url: "https://example.com/berita/penahbisan-gembala-sidang",
+      file: "",
       cta: "Kirim ucapan selamat",
       cat: "Kabar Alumni",
       title: "Dua Alumni Muda Ditahbiskan sebagai Gembala Sidang",
@@ -120,7 +123,7 @@ const CONTENT = {
     {
       id: "n5",
       img: "",
-      url: "https://example.com/berita/beasiswa-alumni-tahap-2",
+      file: "",
       cta: "Buka info beasiswa",
       cat: "Kabar Alumni",
       title: "Program Beasiswa Alumni Tahap Kedua Dibuka",
@@ -435,7 +438,7 @@ const CONTENT = {
   articles: [
     {
       id: "a1",
-      url: "article1.html",
+      file: "article1.html",
       cta: "Baca artikel lengkap",
       tag: "Visi",
       title: "Mau Dibawa ke Mana Ikatan Alumni?",
@@ -452,7 +455,7 @@ const CONTENT = {
     },
     {
       id: "a2",
-      url: "",
+      file: "",
       cta: "Baca artikel lengkap",
       tag: "Kosong",
       title: "Belum Ada",
@@ -468,7 +471,7 @@ const CONTENT = {
     },
     {
       id: "a3",
-      url: "",
+      file: "",
       cta: "Baca artikel lengkap",
       tag: "Kosong",
       title: "Belum Ada",
@@ -484,7 +487,7 @@ const CONTENT = {
     },
     {
       id: "a4",
-      url: "",
+      file: "",
       cta: "Baca artikel lengkap",
       tag: "Kosong",
       title: "Belum Ada",
@@ -500,7 +503,7 @@ const CONTENT = {
     },
     {
       id: "a5",
-      url: "",
+      file: "",
       cta: "Baca artikel lengkap",
       tag: "Kosong",
       title: "Belum Ada",
@@ -516,7 +519,7 @@ const CONTENT = {
     },
     {
       id: "a6",
-      url: "",
+      file: "",
       cta: "Baca artikel lengkap",
       tag: "Kosong",
       title: "Belum Ada",
@@ -537,25 +540,21 @@ const CONTENT = {
     rows: [
       {
         label: "Sekretariat",
-        value: "Institut Injil Indonesia, Batu, Jawa Timur",
+        value: "Kampus Institut Injil Indonesia, Batu, Jawa Timur",
         copy: true,
       },
-      {
-        label: "Email",
-        value: "gatauemailnyaapa@alumni-injil.example",
-        copy: true,
-      },
+      { label: "Email", value: "sekretariat@alumni-injil.example", copy: true },
       { label: "WhatsApp", value: "+62 812 0000 0000", copy: true },
       { label: "Instagram", value: "@alumni.injil.contoh", copy: true },
       {
         label: "Jam layanan",
-        value: "Senin sampai Minggu, 24 Jam.",
+        value: "Senin sampai Jumat, 08.00 sampai 16.00 WIB",
         copy: false,
       },
     ],
   },
   bank: {
-    text: "Dukungan Anda membiayai beasiswa, kunjungan pelayanan, dan kegiatan alumni. Pilih tujuan, transfer ke rekening yang sesuai, lalu kirim konfirmasi melalui kontak yang tersedia diatas.",
+    text: "Dukungan Anda membiayai beasiswa, kunjungan pelayanan, dan kegiatan alumni. Pilih tujuan, transfer ke rekening yang sesuai, lalu kirim konfirmasi kepada bendahara.",
     accounts: [
       {
         id: "b1",
@@ -970,7 +969,7 @@ function updateMsg() {
   const angk = $("#f-angk").value.trim() || "[tahun angkatan]";
   const nom = $("#f-nominal").value.trim() || "[nominal]";
   $("#f-out").value =
-    `Shalom, Bendahara ${CONTENT.org.fullName}.\n\nSaya ${nama} (Angkatan ${angk}) sudah mentransfer ${nom} untuk ${acc.purpose.toLowerCase()} ke rekening ${acc.bank} ${acc.number} a.n. ${acc.holder}.\n\nBukti transfer saya lampirkan. Terima kasih.`;
+    `Shalom, Pengurus ${CONTENT.org.fullName}.\n\nSaya ${nama} (Angkatan ${angk}) sudah mentransfer ${nom} untuk ${acc.purpose.toLowerCase()} ke rekening ${acc.bank} ${acc.number} a.n. ${acc.holder}.\n\nBukti transfer saya lampirkan. Terima kasih.`;
 }
 
 /* ---------- Overlay ---------- */
@@ -991,6 +990,36 @@ function closeOverlay() {
   document.documentElement.classList.remove("lock");
   if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
 }
+/* Tautan berita/artikel: hanya berkas HTML lokal, jalur relatif terhadap index.html.
+   Alamat internet (https:, javascript:, dan sejenisnya), jalur yang diawali "/" atau huruf
+   drive, dan berkas selain .html/.htm ditolak, lalu tombolnya disembunyikan. */
+function localPage(p) {
+  if (typeof p !== "string") return "";
+  const raw = p.trim().replace(/\\/g, "/");
+  if (!raw) return "";
+  if (
+    /^[a-z][a-z0-9+.-]*:/i.test(raw) ||
+    raw.startsWith("/") ||
+    /[?#]/.test(raw) ||
+    !/\.html?$/i.test(raw)
+  ) {
+    console.warn(
+      '[CONTENT] "file" harus berupa jalur relatif ke berkas .html lokal, bukan: ' +
+        p,
+    );
+    return "";
+  }
+  return raw
+    .split("/")
+    .map((seg) => {
+      try {
+        return encodeURIComponent(decodeURIComponent(seg));
+      } catch (e) {
+        return encodeURIComponent(seg);
+      }
+    })
+    .join("/");
+}
 function openReader(type, id) {
   const list = type === "news" ? CONTENT.news : CONTENT.articles;
   const it = list.find((x) => x.id === id);
@@ -1009,49 +1038,13 @@ function openReader(type, id) {
   rm.innerHTML = showImg
     ? photoBox(list.indexOf(it) + 1, it.img, it.title)
     : "";
-
   const act = $("#rdAction");
-
-  // Menerima URL online atau jalur file HTML relatif
-  const hasLink =
-    !!it.url &&
-    (/^https?:\/\//i.test(it.url) ||
-      /^(?!file:)[^:]+\.html?(?:[?#].*)?$/i.test(it.url) ||
-      /^\.{1,2}\//.test(it.url) ||
-      /^\//.test(it.url));
-
-  let host = "";
-
-  if (hasLink) {
-    try {
-      host = /^https?:\/\//i.test(it.url)
-        ? new URL(it.url).hostname.replace(/^www\./, "")
-        : "Halaman HTML";
-    } catch (e) {
-      host = "Halaman HTML";
-    }
-  }
-
-  act.hidden = !hasLink;
-
-  act.innerHTML = hasLink
-    ? `<a class="btn btn-primary"
-       href="${esc(it.url)}"
-       target="_self"
-       rel="noopener noreferrer">
-       ${esc(it.cta || "Buka halaman HTML")}
-       <span aria-hidden="true">↗</span>
-     </a>
-     <button class="btn btn-sm"
-       type="button"
-       data-action="copy"
-       data-text="${esc(it.url)}"
-       data-label="Tautan">
-       Salin tautan
-     </button>
-     <span class="rd-host">${esc(host)}</span>`
+  const href = localPage(it.file);
+  act.hidden = !href;
+  act.innerHTML = href
+    ? `<a class="btn btn-primary" href="${esc(href)}">${esc(it.cta || "Buka halaman")} <span aria-hidden="true">→</span></a>
+       <span class="rd-host">${esc(it.file.trim())}</span>`
     : "";
-
   openOverlay($("#reader"));
   $("#reader .panel").scrollTop = 0;
 }

@@ -1,28 +1,21 @@
+/* ============================================================
+   Reset dasar. Di halaman yang dipublikasikan sebagai artifact, aturan
+   ini disediakan oleh kerangka halaman. Di situs sendiri harus ada di CSS.
+   ============================================================ */
 :root {
   color-scheme: light;
-  box-sizing: border-box;
-  padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-html {
-  scroll-padding-top: env(safe-area-inset-top, 0px);
+  padding-block: env(safe-area-inset-top, 0px) env(safe-area-inset-bottom, 0px);
 }
 body {
   margin: 0;
-  padding: 0;
-  font:
-    14px -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
-  background: #fff;
-  color: #000;
 }
 img {
   max-width: 100%;
 }
-[hidden]:not([hidden="until-found" i]) {
+[hidden] {
   display: none !important;
 }
+
 /* Layout: kapsul navigasi yang sama dengan situs utama → kepala tulisan (kategori, judul, ringkasan, penulis) → foto sampul → dua kolom: daftar isi lengket + isi tulisan → penutup (tag, tautan, penulis) → baca juga → footer. Aksen amber dipakai hemat. */
 :root {
   --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
@@ -40,11 +33,11 @@ img {
   --on-accent: #1c1200;
   --accent-text: #8a5200;
   --focus: #2342d6;
+  --alt1: #76c4ff;
   --shadow:
     0 1px 2px rgba(15, 26, 60, 0.06), 0 10px 28px rgba(15, 26, 60, 0.09);
   --plate: #ffffff;
   --plate-ink: #0f1a3c;
-  --alt1: #76c4ff;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -78,9 +71,9 @@ img {
   --on-accent: #1c1200;
   --accent-text: #f5b33d;
   --focus: #8fa6ff;
+  --alt1: #359eff;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px rgba(0, 0, 0, 0.38);
   color-scheme: dark;
-  --alt1: #359eff;
 }
 
 *,
