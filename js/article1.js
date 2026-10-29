@@ -698,7 +698,7 @@ renderBody();
 renderEnd();
 renderRelated();
 $("#footText").textContent =
-  `© ${new Date().getFullYear()} ${CONTENT.org.fullName}. Soli Deo Gloria.`;
+  `© Christian Marlen Firuli Simarmata. Salus Animarum Suprema Lex.`;
 $("#notice").hidden = !CONTENT.sampleNotice;
 applySize();
 setupInk();
