@@ -450,7 +450,6 @@ const CONTENT = {
         "Sebuah visi yang lahir dari pergumulan reflektif seorang pemimpin yang telah diberi kepercayaan.",
       body: [
         "Organisasi yang baik bukan hanya organisasi yang bertahan pada masa kepemimpinan saat ini, melainkan organisasi yang mampu mewariskan visi, membentuk pemimpin baru, dan menjaga misi tetap hidup setelah generasi pemimpinnya berganti.",
-        "Saya ingin melihat alumni memandang almamater seperti rumah rohani yang selalu dirindukan, tempat kita bisa kembali untuk memperbarui visi dan semangat pelayanan. Kesatuan ini bukan tentang formalitas; ini tentang bagaimana alumni melihat almamater sebagai bagian dari panggilan Tuhan dalam hidup mereka.",
       ],
     },
     {
